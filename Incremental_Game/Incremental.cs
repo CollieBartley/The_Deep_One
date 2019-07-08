@@ -56,6 +56,24 @@ namespace Incremental_Game
         public Rectangle button6pos;
         public int button6Pressedtick = 0;
         public int button6Releasedtick = 0;
+
+        public Texture2D button7;
+        public Texture2D button7Pressed;
+        public Rectangle button7pos;
+        public int button7Pressedtick = 0;
+        public int button7Releasedtick = 0;
+
+        public Texture2D button8;
+        public Texture2D button8Pressed;
+        public Rectangle button8pos;
+        public int button8Pressedtick = 0;
+        public int button8Releasedtick = 0;
+
+        public Texture2D button9;
+        public Texture2D button9Pressed;
+        public Rectangle button9pos;
+        public int button9Pressedtick = 0;
+        public int button9Releasedtick = 0;
         #endregion 
 
         public Texture2D temp;
@@ -72,6 +90,9 @@ namespace Incremental_Game
         public int upgrade3 = 0;
         public int upgrade4 = 0;
         public int upgrade5 = 0;
+        public int upgrade6 = 0;
+        public int upgrade7 = 0;
+        public int upgrade8 = 0;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -146,6 +167,27 @@ namespace Incremental_Game
             button6pos.Y = 386;
             button6pos.Width = 213;
             button6pos.Height = 54;
+
+            button7 = Content.Load<Texture2D>("button");
+            button7Pressed = Content.Load<Texture2D>("buttonPressed");
+            button7pos.X = 1318;
+            button7pos.Y = 452;
+            button7pos.Width = 213;
+            button7pos.Height = 54;
+
+            button8 = Content.Load<Texture2D>("button");
+            button8Pressed = Content.Load<Texture2D>("buttonPressed");
+            button8pos.X = 1318;
+            button8pos.Y = 518;
+            button8pos.Width = 213;
+            button8pos.Height = 54;
+
+            button9 = Content.Load<Texture2D>("button");
+            button9Pressed = Content.Load<Texture2D>("buttonPressed");
+            button9pos.X = 1318;
+            button9pos.Y = 584;
+            button9pos.Width = 213;
+            button9pos.Height = 54;
             #endregion 
 
             font = Content.Load<SpriteFont>("font");
@@ -164,11 +206,55 @@ namespace Incremental_Game
             {
                 timeSinceLastUpdate = 0;
 
+                #region UPGRADES
                 if (upgrade1 > 0)
                 {
-                    souls += (upgrade1 * 2);
+                    souls += (upgrade1 * 5);
 
                 }
+
+                if (upgrade2 > 0)
+                {
+                    souls += (upgrade1 * 10);
+
+                }
+
+                if (upgrade3 > 0)
+                {
+                    souls += (upgrade1 * 50);
+
+                }
+
+                if (upgrade4 > 0)
+                {
+                    souls += (upgrade1 * 100);
+
+                }
+
+                if (upgrade5 > 0)
+                {
+                    souls += (upgrade1 * 1000);
+
+                }
+
+                if (upgrade6 > 0)
+                {
+                    souls += (upgrade1 * 10000);
+
+                }
+
+                if (upgrade7 > 0)
+                {
+                    souls += (upgrade1 * 100000);
+
+                }
+
+                if (upgrade8 > 0)
+                {
+                    souls += (upgrade1 * 1000000);
+
+                }
+                #endregion
 
             }
 
@@ -272,7 +358,7 @@ namespace Incremental_Game
 
                 if (button3Pressedtick == 1 && soulsadd == false)
                 {
-                    souls++;
+                    upgrade2++;
                     soulsadd = true;
                 }
 
@@ -303,7 +389,7 @@ namespace Incremental_Game
 
                 if (button4Pressedtick == 1 && soulsadd == false)
                 {
-                    souls++;
+                    upgrade3++;
                     soulsadd = true;
                 }
 
@@ -334,7 +420,7 @@ namespace Incremental_Game
 
                 if (button5Pressedtick == 1 && soulsadd == false)
                 {
-                    souls++;
+                    upgrade4++;
                     soulsadd = true;
                 }
 
@@ -365,7 +451,7 @@ namespace Incremental_Game
 
                 if (button6Pressedtick == 1 && soulsadd == false)
                 {
-                    souls++;
+                    upgrade5++;
                     soulsadd = true;
                 }
 
@@ -373,11 +459,103 @@ namespace Incremental_Game
                 {
                     soulsadd = false;
                 }
+            #endregion
+
+                #region BUTTON 7 INTERACTION - Upgrade 6
+                if (MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button7Pressedtick = 1;
+                }
+                else
+                {
+                    button7Pressedtick = 0;
+                }
+
+                if (MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button7Releasedtick = 1;
+                }
+                else
+                {
+                    button7Releasedtick = 0;
+                }
+
+                if (button7Pressedtick == 1 && soulsadd == false)
+                {
+                    upgrade6++;
+                    soulsadd = true;
+                }
+
+                if (button7Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
                 #endregion
 
-                base.Update(gameTime);
-        }
+                #region BUTTON 8 INTERACTION - Upgrade 7
+                if (MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button8Pressedtick = 1;
+                }
+                else
+                {
+                    button8Pressedtick = 0;
+                }
 
+                if (MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button8Releasedtick = 1;
+                }
+                else
+                {
+                    button8Releasedtick = 0;
+                }
+
+                if (button8Pressedtick == 1 && soulsadd == false)
+                {
+                    upgrade7++;
+                    soulsadd = true;
+                }
+
+                if (button8Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
+
+                #region BUTTON 9 INTERACTION - Upgrade 8
+                if (MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button9Pressedtick = 1;
+                }
+                else
+                {
+                    button9Pressedtick = 0;
+                }
+
+                if (MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button9Releasedtick = 1;
+                }
+                else
+                {
+                    button9Releasedtick = 0;
+                }
+
+                if (button9Pressedtick == 1 && soulsadd == false)
+                {
+                    upgrade8++;
+                    soulsadd = true;
+                }
+
+                if (button9Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
+
+            base.Update(gameTime);
+        }
 
         protected override void Draw(GameTime gameTime)
         {
@@ -397,6 +575,9 @@ namespace Incremental_Game
             spriteBatch.Draw(button4, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
             spriteBatch.Draw(button5, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
             spriteBatch.Draw(button6, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
+            spriteBatch.Draw(button7, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
+            spriteBatch.Draw(button8, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
+            spriteBatch.Draw(button9, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
 
             if (button1Pressedtick == 1)
             {
@@ -426,6 +607,21 @@ namespace Incremental_Game
             if (button6Pressedtick == 1)
             {
                 spriteBatch.Draw(button6Pressed, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
+            }
+
+            if (button7Pressedtick == 1)
+            {
+                spriteBatch.Draw(button7Pressed, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
+            }
+
+            if (button8Pressedtick == 1)
+            {
+                spriteBatch.Draw(button8Pressed, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
+            }
+
+            if (button9Pressedtick == 1)
+            {
+                spriteBatch.Draw(button9Pressed, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
             }
             #endregion
 
