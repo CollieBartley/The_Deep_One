@@ -22,34 +22,38 @@ namespace Incremental_Game
         public Texture2D button1Pressed;
         public Rectangle button1pos;
         public int button1Pressedtick = 0;
+        public int button1Releasedtick = 0;
 
         public Texture2D button2;
         public Texture2D button2Pressed;
         public Rectangle button2pos;
         public int button2Pressedtick = 0;
+        public int button2Releasedtick = 0;
 
         public Texture2D button3;
         public Texture2D button3Pressed;
         public Rectangle button3pos;
         public int button3Pressedtick = 0;
+        public int button3Releasedtick = 0;
 
         public Texture2D button4;
         public Texture2D button4Pressed;
         public Rectangle button4pos;
         public int button4Pressedtick = 0;
+        public int button4Releasedtick = 0;
 
         public Texture2D button5;
         public Texture2D button5Pressed;
         public Rectangle button5pos;
         public int button5Pressedtick = 0;
+        public int button5Releasedtick = 0;
 
         public Texture2D button6;
         public Texture2D button6Pressed;
         public Rectangle button6pos;
         public int button6Pressedtick = 0;
+        public int button6Releasedtick = 0;
         #endregion 
-
-
 
         public Texture2D temp;
 
@@ -58,7 +62,11 @@ namespace Incremental_Game
         public int MouseX, MouseY;
         private MouseState oldState;
 
+        public int souls = 0;
+        public bool soulsadd = false;
+
         private SpriteFont font;
+        private SpriteFont fontlarge;
         public Rectangle Screen;
 
         public Incremental()
@@ -132,7 +140,8 @@ namespace Incremental_Game
             button6pos.Height = 54;
             #endregion 
 
-            font = Content.Load<SpriteFont>("arial");
+            font = Content.Load<SpriteFont>("font");
+            fontlarge = Content.Load<SpriteFont>("fontlarge");
         }
 
         protected override void UnloadContent()
@@ -158,6 +167,8 @@ namespace Incremental_Game
                 MouseDest.Y = MouseY;
             }
 
+            #region BUTTON 1 INTERACTION - Clicker
+
             if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 button1Pressedtick = 1;
@@ -167,6 +178,28 @@ namespace Incremental_Game
                 button1Pressedtick = 0;
             }
 
+            if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                button1Releasedtick = 1;
+            }
+            else
+            {
+                button1Releasedtick = 0;
+            }
+
+            if (button1Pressedtick == 1 && soulsadd == false)
+            {
+                souls++;
+                soulsadd = true;
+            }
+
+            if (button1Releasedtick == 1 && soulsadd == true)
+            {
+                soulsadd = false;
+            }
+            #endregion
+
+            #region BUTTON 2 INTERACTION - Upgrade 1
             if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 button2Pressedtick = 1;
@@ -176,6 +209,28 @@ namespace Incremental_Game
                 button2Pressedtick = 0;
             }
 
+            if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                button2Releasedtick = 1;
+            }
+            else
+            {
+                button2Releasedtick = 0;
+            }
+
+            if (button2Pressedtick == 1 && soulsadd == false)
+            {
+                souls++;
+                soulsadd = true;
+            }
+
+            if (button2Releasedtick == 1 && soulsadd == true)
+            {
+                soulsadd = false;
+            }
+            #endregion
+
+            #region BUTTON 3 INTERACTION - Upgrade 2
             if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 button3Pressedtick = 1;
@@ -185,6 +240,28 @@ namespace Incremental_Game
                 button3Pressedtick = 0;
             }
 
+            if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                button3Releasedtick = 1;
+            }
+            else
+            {
+                button3Releasedtick = 0;
+            }
+
+            if (button3Pressedtick == 1 && soulsadd == false)
+            {
+                souls++;
+                soulsadd = true;
+            }
+
+            if (button3Releasedtick == 1 && soulsadd == true)
+            {
+                soulsadd = false;
+            }
+            #endregion
+
+            #region BUTTON 4 INTERACTION - Upgrade 3
             if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 button4Pressedtick = 1;
@@ -194,6 +271,28 @@ namespace Incremental_Game
                 button4Pressedtick = 0;
             }
 
+            if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                button4Releasedtick = 1;
+            }
+            else
+            {
+                button4Releasedtick = 0;
+            }
+
+            if (button4Pressedtick == 1 && soulsadd == false)
+            {
+                souls++;
+                soulsadd = true;
+            }
+
+            if (button4Releasedtick == 1 && soulsadd == true)
+            {
+                soulsadd = false;
+            }
+            #endregion
+
+            #region BUTTON 5 INTERACTION - Upgrade 4
             if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 button5Pressedtick = 1;
@@ -203,6 +302,28 @@ namespace Incremental_Game
                 button5Pressedtick = 0;
             }
 
+            if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                button5Releasedtick = 1;
+            }
+            else
+            {
+                button5Releasedtick = 0;
+            }
+
+            if (button5Pressedtick == 1 && soulsadd == false)
+            {
+                souls++;
+                soulsadd = true;
+            }
+
+            if (button5Releasedtick == 1 && soulsadd == true)
+            {
+                soulsadd = false;
+            }
+            #endregion
+
+            #region BUTTON 6 INTERACTION - Upgrade 5
             if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 button6Pressedtick = 1;
@@ -211,6 +332,27 @@ namespace Incremental_Game
             {
                 button6Pressedtick = 0;
             }
+
+            if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                button6Releasedtick = 1;
+            }
+            else
+            {
+                button6Releasedtick = 0;
+            }
+
+            if (button6Pressedtick == 1 && soulsadd == false)
+            {
+                souls++;
+                soulsadd = true;
+            }
+
+            if (button6Releasedtick == 1 && soulsadd == true)
+            {
+                soulsadd = false;
+            }
+            #endregion
 
             base.Update(gameTime);
         }
@@ -223,6 +365,10 @@ namespace Incremental_Game
             spriteBatch.Begin();
 
             //spriteBatch.Draw(temp, new Rectangle(0, 0, Screen.Width, Screen.Height), Color.White);
+
+            spriteBatch.DrawString(fontlarge, "Souls: " + souls, new Vector2(15, 15), Color.White);
+
+            #region BUTTON DRAWING
             spriteBatch.Draw(button1, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
             spriteBatch.Draw(button2, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
             spriteBatch.Draw(button3, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
@@ -259,19 +405,20 @@ namespace Incremental_Game
             {
                 spriteBatch.Draw(button6Pressed, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
             }
+            #endregion
 
             #region DEBUG MOUSE
 
-            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 0), Color.White);
-            spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 15), Color.White);
+            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 860), Color.White);
+            spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 880), Color.White);
 
             if (newState.LeftButton == ButtonState.Pressed)
             {
-                spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 30), Color.White);
+                spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 840), Color.White);
             }
             else
             {
-                spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 30), Color.White);
+                spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 840), Color.White);
             }
             #endregion
 

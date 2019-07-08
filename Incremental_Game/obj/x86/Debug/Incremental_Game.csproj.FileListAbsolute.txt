@@ -23,8 +23,9 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x86\Debug\Incremental_Game.csproj.CopyComplete
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x86\Debug\Incremental_Game.exe
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x86\Debug\Incremental_Game.pdb
-D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\arial.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\button.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\buttonPressed.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\logo.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\temp.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\font.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\Windows\x86\Debug\Content\fontlarge.xnb
