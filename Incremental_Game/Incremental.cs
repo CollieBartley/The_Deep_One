@@ -15,6 +15,9 @@ namespace Incremental_Game
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        int millisecondsPerFrame = 1000; //Update every 1 second
+        int timeSinceLastUpdate = 0; //Accumulate the elapsed time
+
         public Texture2D rect;
 
         #region BUTTON TEX2D, RECT & TICK
@@ -64,6 +67,11 @@ namespace Incremental_Game
 
         public int souls = 0;
         public bool soulsadd = false;
+        public int upgrade1 = 0;
+        public int upgrade2 = 0;
+        public int upgrade3 = 0;
+        public int upgrade4 = 0;
+        public int upgrade5 = 0;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -151,211 +159,225 @@ namespace Incremental_Game
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            //Mouse position state
-            MouseY = Mouse.GetState().Y;
-            MouseX = Mouse.GetState().X;
-
-            //Mouse clicking
-            MouseState newState = Mouse.GetState();
-
-            if (newState.LeftButton == ButtonState.Pressed)
+            timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (timeSinceLastUpdate >= millisecondsPerFrame)
             {
-                MouseDest.X = MouseX;
-                MouseDest.Y = MouseY;
+                timeSinceLastUpdate = 0;
+
+                if (upgrade1 > 0)
+                {
+                    souls += (upgrade1 * 2);
+
+                }
+
             }
 
-            #region BUTTON 1 INTERACTION - Clicker
+                if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                    Exit();
 
-            if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
-            {
-                button1Pressedtick = 1;
-            }
-            else
-            {
-                button1Pressedtick = 0;
-            }
+                //Mouse position state
+                MouseY = Mouse.GetState().Y;
+                MouseX = Mouse.GetState().X;
 
-            if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Released))
-            {
-                button1Releasedtick = 1;
-            }
-            else
-            {
-                button1Releasedtick = 0;
-            }
+                //Mouse clicking
+                MouseState newState = Mouse.GetState();
 
-            if (button1Pressedtick == 1 && soulsadd == false)
-            {
-                souls++;
-                soulsadd = true;
-            }
+                if (newState.LeftButton == ButtonState.Pressed)
+                {
+                    MouseDest.X = MouseX;
+                    MouseDest.Y = MouseY;
+                }
 
-            if (button1Releasedtick == 1 && soulsadd == true)
-            {
-                soulsadd = false;
-            }
-            #endregion
+                #region BUTTON 1 INTERACTION - Clicker
 
-            #region BUTTON 2 INTERACTION - Upgrade 1
-            if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Pressed))
-            {
-                button2Pressedtick = 1;
-            }
-            else
-            {
-                button2Pressedtick = 0;
-            }
+                if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button1Pressedtick = 1;
+                }
+                else
+                {
+                    button1Pressedtick = 0;
+                }
 
-            if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Released))
-            {
-                button2Releasedtick = 1;
-            }
-            else
-            {
-                button2Releasedtick = 0;
-            }
+                if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button1Releasedtick = 1;
+                }
+                else
+                {
+                    button1Releasedtick = 0;
+                }
 
-            if (button2Pressedtick == 1 && soulsadd == false)
-            {
-                souls++;
-                soulsadd = true;
-            }
+                if (button1Pressedtick == 1 && soulsadd == false)
+                {
+                    souls++;
+                    soulsadd = true;
+                }
 
-            if (button2Releasedtick == 1 && soulsadd == true)
-            {
-                soulsadd = false;
-            }
-            #endregion
+                if (button1Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
 
-            #region BUTTON 3 INTERACTION - Upgrade 2
-            if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Pressed))
-            {
-                button3Pressedtick = 1;
-            }
-            else
-            {
-                button3Pressedtick = 0;
-            }
+                #region BUTTON 2 INTERACTION - Upgrade 1
+                if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button2Pressedtick = 1;
+                }
+                else
+                {
+                    button2Pressedtick = 0;
+                }
 
-            if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Released))
-            {
-                button3Releasedtick = 1;
-            }
-            else
-            {
-                button3Releasedtick = 0;
-            }
+                if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button2Releasedtick = 1;
+                }
+                else
+                {
+                    button2Releasedtick = 0;
+                }
 
-            if (button3Pressedtick == 1 && soulsadd == false)
-            {
-                souls++;
-                soulsadd = true;
-            }
+                if (button2Pressedtick == 1 && soulsadd == false)
+                {
+                    upgrade1++;
+                    soulsadd = true;
+                }
 
-            if (button3Releasedtick == 1 && soulsadd == true)
-            {
-                soulsadd = false;
-            }
-            #endregion
+                if (button2Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
 
-            #region BUTTON 4 INTERACTION - Upgrade 3
-            if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Pressed))
-            {
-                button4Pressedtick = 1;
-            }
-            else
-            {
-                button4Pressedtick = 0;
-            }
+                #region BUTTON 3 INTERACTION - Upgrade 2
+                if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button3Pressedtick = 1;
+                }
+                else
+                {
+                    button3Pressedtick = 0;
+                }
 
-            if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Released))
-            {
-                button4Releasedtick = 1;
-            }
-            else
-            {
-                button4Releasedtick = 0;
-            }
+                if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button3Releasedtick = 1;
+                }
+                else
+                {
+                    button3Releasedtick = 0;
+                }
 
-            if (button4Pressedtick == 1 && soulsadd == false)
-            {
-                souls++;
-                soulsadd = true;
-            }
+                if (button3Pressedtick == 1 && soulsadd == false)
+                {
+                    souls++;
+                    soulsadd = true;
+                }
 
-            if (button4Releasedtick == 1 && soulsadd == true)
-            {
-                soulsadd = false;
-            }
-            #endregion
+                if (button3Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
 
-            #region BUTTON 5 INTERACTION - Upgrade 4
-            if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Pressed))
-            {
-                button5Pressedtick = 1;
-            }
-            else
-            {
-                button5Pressedtick = 0;
-            }
+                #region BUTTON 4 INTERACTION - Upgrade 3
+                if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button4Pressedtick = 1;
+                }
+                else
+                {
+                    button4Pressedtick = 0;
+                }
 
-            if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Released))
-            {
-                button5Releasedtick = 1;
-            }
-            else
-            {
-                button5Releasedtick = 0;
-            }
+                if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button4Releasedtick = 1;
+                }
+                else
+                {
+                    button4Releasedtick = 0;
+                }
 
-            if (button5Pressedtick == 1 && soulsadd == false)
-            {
-                souls++;
-                soulsadd = true;
-            }
+                if (button4Pressedtick == 1 && soulsadd == false)
+                {
+                    souls++;
+                    soulsadd = true;
+                }
 
-            if (button5Releasedtick == 1 && soulsadd == true)
-            {
-                soulsadd = false;
-            }
-            #endregion
+                if (button4Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
 
-            #region BUTTON 6 INTERACTION - Upgrade 5
-            if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Pressed))
-            {
-                button6Pressedtick = 1;
-            }
-            else
-            {
-                button6Pressedtick = 0;
-            }
+                #region BUTTON 5 INTERACTION - Upgrade 4
+                if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button5Pressedtick = 1;
+                }
+                else
+                {
+                    button5Pressedtick = 0;
+                }
 
-            if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Released))
-            {
-                button6Releasedtick = 1;
-            }
-            else
-            {
-                button6Releasedtick = 0;
-            }
+                if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button5Releasedtick = 1;
+                }
+                else
+                {
+                    button5Releasedtick = 0;
+                }
 
-            if (button6Pressedtick == 1 && soulsadd == false)
-            {
-                souls++;
-                soulsadd = true;
-            }
+                if (button5Pressedtick == 1 && soulsadd == false)
+                {
+                    souls++;
+                    soulsadd = true;
+                }
 
-            if (button6Releasedtick == 1 && soulsadd == true)
-            {
-                soulsadd = false;
-            }
-            #endregion
+                if (button5Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
 
-            base.Update(gameTime);
+                #region BUTTON 6 INTERACTION - Upgrade 5
+                if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    button6Pressedtick = 1;
+                }
+                else
+                {
+                    button6Pressedtick = 0;
+                }
+
+                if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    button6Releasedtick = 1;
+                }
+                else
+                {
+                    button6Releasedtick = 0;
+                }
+
+                if (button6Pressedtick == 1 && soulsadd == false)
+                {
+                    souls++;
+                    soulsadd = true;
+                }
+
+                if (button6Releasedtick == 1 && soulsadd == true)
+                {
+                    soulsadd = false;
+                }
+                #endregion
+
+                base.Update(gameTime);
         }
+
 
         protected override void Draw(GameTime gameTime)
         {
