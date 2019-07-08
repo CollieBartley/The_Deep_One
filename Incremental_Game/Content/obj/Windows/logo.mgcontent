@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/logo.PNG</SourceFile>
+  <SourceTime>2019-07-08T12:31:56.6837462+10:00</SourceTime>
+  <DestFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/logo.xnb</DestFile>
+  <DestTime>2019-07-08T13:48:39.9686646+10:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2017-03-02T02:05:36+11:00</ImporterTime>
+  <Processor>TextureProcessor</Processor>
+  <ProcessorTime>2017-03-02T02:05:36+11:00</ProcessorTime>
+  <Parameters>
+    <Key>ColorKeyColor</Key>
+    <Value>255,0,255,255</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ColorKeyEnabled</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>GenerateMipmaps</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ResizeToPowerOfTwo</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>MakeSquare</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Color</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

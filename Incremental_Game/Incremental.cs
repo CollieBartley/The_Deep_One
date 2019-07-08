@@ -17,9 +17,31 @@ namespace Incremental_Game
 
         public Texture2D rect;
 
-        public Texture2D button;
-        public Texture2D buttonPressed;
+        public Texture2D button1;
+        public Texture2D button1Pressed;
         public Rectangle button1pos;
+
+        public Texture2D button2;
+        public Texture2D button2Pressed;
+        public Rectangle button2pos;
+
+        public Texture2D button3;
+        public Texture2D button3Pressed;
+        public Rectangle button3pos;
+
+        public Texture2D button4;
+        public Texture2D button4Pressed;
+        public Rectangle button4pos;
+
+        public Texture2D button5;
+        public Texture2D button5Pressed;
+        public Rectangle button5pos;
+
+        public Texture2D button6;
+        public Texture2D button6Pressed;
+        public Rectangle button6pos;
+
+        public Texture2D temp;
 
         // Mouse
         public Rectangle MouseDest;
@@ -54,11 +76,43 @@ namespace Incremental_Game
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            button = Content.Load<Texture2D>("button");
-            button1pos.X = 100;
-            button1pos.Y = 100;
+            temp = Content.Load<Texture2D>("temp");
+
+            button1 = Content.Load<Texture2D>("button");
+            button1pos.X = 1318;
+            button1pos.Y = 56;
             button1pos.Width = 213;
             button1pos.Height = 54;
+
+            button2 = Content.Load<Texture2D>("button");
+            button2pos.X = 1318;
+            button2pos.Y = 122;
+            button2pos.Width = 213;
+            button2pos.Height = 54;
+
+            button3 = Content.Load<Texture2D>("button");
+            button3pos.X = 1318;
+            button3pos.Y = 187;
+            button3pos.Width = 213;
+            button3pos.Height = 54;
+
+            button4 = Content.Load<Texture2D>("button");
+            button4pos.X = 1318;
+            button4pos.Y = 254;
+            button4pos.Width = 213;
+            button4pos.Height = 54;
+
+            button5 = Content.Load<Texture2D>("button");
+            button5pos.X = 1318;
+            button5pos.Y = 320;
+            button5pos.Width = 213;
+            button5pos.Height = 54;
+
+            button6 = Content.Load<Texture2D>("button");
+            button6pos.X = 1318;
+            button6pos.Y = 386;
+            button6pos.Width = 213;
+            button6pos.Height = 54;
 
             font = Content.Load<SpriteFont>("arial");
         }
@@ -101,7 +155,13 @@ namespace Incremental_Game
 
             spriteBatch.Begin();
 
-            spriteBatch.Draw(button, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
+            //spriteBatch.Draw(temp, new Rectangle(0, 0, Screen.Width, Screen.Height), Color.White);
+            spriteBatch.Draw(button1, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
+            spriteBatch.Draw(button2, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
+            spriteBatch.Draw(button3, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
+            spriteBatch.Draw(button4, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
+            spriteBatch.Draw(button5, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
+            spriteBatch.Draw(button6, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
 
             #region DEBUG MOUSE
 
