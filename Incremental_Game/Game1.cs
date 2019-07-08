@@ -86,7 +86,7 @@ namespace Incremental_Game
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
             MouseState newState = Mouse.GetState();
 
             spriteBatch.Begin();
