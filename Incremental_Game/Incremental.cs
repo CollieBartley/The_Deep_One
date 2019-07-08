@@ -10,12 +10,16 @@ using System.Linq;
 
 namespace Incremental_Game
 {
-    public class Game1 : Game
+    public class Incremental : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         public Texture2D rect;
+
+        public Texture2D button;
+        public Texture2D buttonPressed;
+        public Rectangle button1pos;
 
         // Mouse
         public Rectangle MouseDest;
@@ -25,7 +29,7 @@ namespace Incremental_Game
         private SpriteFont font;
         public Rectangle Screen;
 
-        public Game1()
+        public Incremental()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -49,6 +53,12 @@ namespace Incremental_Game
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            button = Content.Load<Texture2D>("button");
+            button1pos.X = 100;
+            button1pos.Y = 100;
+            button1pos.Width = 213;
+            button1pos.Height = 54;
 
             font = Content.Load<SpriteFont>("arial");
         }
@@ -90,6 +100,8 @@ namespace Incremental_Game
             MouseState newState = Mouse.GetState();
 
             spriteBatch.Begin();
+
+            spriteBatch.Draw(button, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
 
             #region DEBUG MOUSE
 
