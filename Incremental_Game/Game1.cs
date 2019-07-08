@@ -48,13 +48,9 @@ namespace Incremental_Game
 
         protected override void LoadContent()
         {
-
-
-
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-
-
+            font = Content.Load<SpriteFont>("arial");
         }
 
         protected override void UnloadContent()
@@ -80,14 +76,37 @@ namespace Incremental_Game
                 MouseDest.Y = MouseY;
             }
 
+            //if (MouseDest.Intersects(XXXX))
+            //{
+
+            //}
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            MouseState newState = Mouse.GetState();
 
+            spriteBatch.Begin();
 
+            #region DEBUG MOUSE
+
+            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 0), Color.White);
+            spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 15), Color.White);
+
+            if (newState.LeftButton == ButtonState.Pressed)
+            {
+                spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 30), Color.White);
+            }
+            else
+            {
+                spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 30), Color.White);
+            }
+            #endregion
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
