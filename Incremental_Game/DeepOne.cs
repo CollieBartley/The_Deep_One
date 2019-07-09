@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace Incremental_Game
+namespace The_Deep_One
 {
-    public class Incremental : Game
+    public class DeepOne : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -74,15 +74,24 @@ namespace Incremental_Game
         public Rectangle button9pos;
         public int button9Pressedtick = 0;
         public int button9Releasedtick = 0;
+
+        public Texture2D button10;
+        public Texture2D button10Pressed;
+        public Rectangle button10pos;
+        public int button10Pressedtick = 0;
+        public int button10Releasedtick = 0;
+        public int completetick = 0;
         #endregion 
 
         public Texture2D temp;
+        public Texture2D logo;
 
         // Mouse
         public Rectangle MouseDest;
         public int MouseX, MouseY;
+        public int debug = 0;
 
-        public Int64 souls = 0;
+        public Int64 souls = 9999999999;
         public bool soulsadd = false;
         public int upgrade1 = 0;
         public int upgrade2 = 0;
@@ -93,11 +102,13 @@ namespace Incremental_Game
         public int upgrade7 = 0;
         public int upgrade8 = 0;
 
+        public int endstate = 0;
+
         private SpriteFont font;
         private SpriteFont fontlarge;
         public Rectangle Screen;
 
-        public Incremental()
+        public DeepOne()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -123,6 +134,7 @@ namespace Incremental_Game
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             temp = Content.Load<Texture2D>("temp");
+            logo = Content.Load<Texture2D>("logo");
 
             #region BUTTONS POS AND LOAD
             button1 = Content.Load<Texture2D>("button");
@@ -187,6 +199,13 @@ namespace Incremental_Game
             button9pos.Y = 584;
             button9pos.Width = 250;
             button9pos.Height = 54;
+
+            button10 = Content.Load<Texture2D>("button");
+            button10Pressed = Content.Load<Texture2D>("buttonPressed");
+            button10pos.X = 675;
+            button10pos.Y = 800;
+            button10pos.Width = 250;
+            button10pos.Height = 54;
             #endregion 
 
             font = Content.Load<SpriteFont>("font");
@@ -291,9 +310,27 @@ namespace Incremental_Game
                 default:
                     break;
             }
-            
-                //Mouse position state
-                MouseY = Mouse.GetState().Y;
+
+            switch (souls >= 10000000000)
+            {
+                case true:
+                    completetick = 1;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button10Pressedtick == 1)
+            {
+                case true:
+                    endstate = 1;
+                    break;
+                default:
+                    break;
+            }
+
+            //Mouse position state
+            MouseY = Mouse.GetState().Y;
                 MouseX = Mouse.GetState().X;
 
                 //Mouse clicking
@@ -721,6 +758,50 @@ namespace Incremental_Game
                 default:
                     break;
                 }
+            #endregion
+
+                #region COMPLETE BUTTON
+                switch (MouseDest.Intersects(button10pos) && (newState.LeftButton == ButtonState.Pressed))
+                {
+                    case true:
+                        button10Pressedtick = 1;
+                        break;
+                    case false:
+                        button10Pressedtick = 0;
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (MouseDest.Intersects(button10pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    case true:
+                        button10Releasedtick = 1;
+                        break;
+                    case false:
+                        button10Releasedtick = 0;
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (button10Pressedtick == 1 && soulsadd == false)
+                {
+                    case true:
+                        completetick = 2;
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (button9Releasedtick == 1 && soulsadd == true)
+                {
+                    case true:
+                        soulsadd = false;
+                        break;
+                    default:
+                        break;
+                }
                 #endregion
 
             base.Update(gameTime);
@@ -734,8 +815,7 @@ namespace Incremental_Game
             spriteBatch.Begin();
 
             //spriteBatch.Draw(temp, new Rectangle(0, 0, Screen.Width, Screen.Height), Color.White);
-
-            spriteBatch.DrawString(fontlarge, "Souls: " + souls, new Vector2(15, 15), Color.White);
+            spriteBatch.Draw(logo, new Rectangle(1100, 445, 655, 655), Color.White);
 
             #region BUTTON DRAWING
             spriteBatch.Draw(button1, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
@@ -747,6 +827,7 @@ namespace Incremental_Game
             spriteBatch.Draw(button7, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
             spriteBatch.Draw(button8, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
             spriteBatch.Draw(button9, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
+
 
             switch (button1Pressedtick)
             {
@@ -828,6 +909,15 @@ namespace Incremental_Game
                 default:
                     break;
             }
+
+            switch (completetick == 1)
+            {
+                case true:
+                    spriteBatch.Draw(button10, new Rectangle(button10pos.X, button10pos.Y, button10pos.Width, button10pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
             #endregion
 
             #region BUTTON QUANTITY TEXT
@@ -844,32 +934,46 @@ namespace Incremental_Game
             #region BUTTON TEXT
             spriteBatch.DrawString(font, "Slaughter in the name of", new Vector2(button1pos.X + 35, button1pos.Y + 9), Color.White);
             spriteBatch.DrawString(font, "The Deep One", new Vector2(button1pos.X + 75, button1pos.Y + 28), Color.White);
-            spriteBatch.DrawString(font, "$50 - Servitors of Cthulhu", new Vector2(button2pos.X + 10, button2pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$150 - Shoggoth", new Vector2(button3pos.X + 10, button3pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$1K - Dark Young", new Vector2(button4pos.X + 10, button4pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$10K - Star-Spawn of Cthulhu", new Vector2(button5pos.X + 10, button5pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$100K - Dimensional Shambler", new Vector2(button6pos.X + 10, button6pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$1M - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$10M - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "$100M - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "50 - Servitors of Cthulhu", new Vector2(button2pos.X + 10, button2pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "150 - Shoggoth", new Vector2(button3pos.X + 10, button3pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "1K - Dark Young", new Vector2(button4pos.X + 10, button4pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "10K - Star-Spawn of Cthulhu", new Vector2(button5pos.X + 10, button5pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "100K - Dimensional Shambler", new Vector2(button6pos.X + 10, button6pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "1M - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "10M - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "100M - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
             #endregion
 
-            #region DEBUG MOUSE
-
-            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 860), Color.White);
-            spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 880), Color.White);
-
-            switch (newState.LeftButton == ButtonState.Pressed)
+            switch (souls >= 10000000000)
             {
                 case true:
-                    spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 840), Color.White);
+                    spriteBatch.DrawString(fontlarge, "Souls: 10000000000", new Vector2(15, 15), Color.White);
                     break;
                 case false:
-                spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 840), Color.White);
+                    spriteBatch.DrawString(fontlarge, "Souls: " + souls, new Vector2(15, 15), Color.White);
                     break;
                 default:
                     break;
             }
+            
+            spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
+            spriteBatch.DrawString(fontlarge, "test" + endstate, new Vector2(0, 0), Color.White);
+
+            #region DEBUG MOUSE
+            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 820), Color.White);
+                    spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 840), Color.White);
+
+                    switch (newState.LeftButton == ButtonState.Pressed)
+                    {
+                        case true:
+                            spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 800), Color.White);
+                            break;
+                        case false:
+                            spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 800), Color.White);
+                            break;
+                        default:
+                            break;
+                    }
             #endregion
 
             spriteBatch.End();

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incremental_Game", "Incremental_Game\Incremental_Game.csproj", "{A793B332-0A8A-4BCA-9463-8D1A20D0FF2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Deep_One", "Incremental_Game\The_Deep_One.csproj", "{A793B332-0A8A-4BCA-9463-8D1A20D0FF2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

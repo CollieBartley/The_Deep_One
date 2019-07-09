@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Incremental_Game
+namespace The_Deep_One
 {
 #if WINDOWS || LINUX
     /// <summary>
@@ -14,7 +14,7 @@ namespace Incremental_Game
         [STAThread]
         static void Main()
         {
-            using (var game = new Incremental())
+            using (var game = new DeepOne())
                 game.Run();
         }
     }
