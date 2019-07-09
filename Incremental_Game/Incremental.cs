@@ -82,7 +82,7 @@ namespace Incremental_Game
         public Rectangle MouseDest;
         public int MouseX, MouseY;
 
-        public int souls = 0;
+        public Int64 souls = 0;
         public bool soulsadd = false;
         public int upgrade1 = 0;
         public int upgrade2 = 0;
@@ -702,11 +702,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button9Pressedtick == 1 && soulsadd == false && souls >= 1000000000)
+                switch (button9Pressedtick == 1 && soulsadd == false && souls >= 100000000)
                 {
                 case true:
                     upgrade8++;
-                    souls -= 1000000000;
+                    souls -= 100000000;
                     soulsadd = true;
                     break;
                 default:
@@ -830,7 +830,7 @@ namespace Incremental_Game
             }
             #endregion
 
-            #region BUTTON TEXT
+            #region BUTTON QUANTITY TEXT
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrade1, new Vector2(button2pos.X - 120, button2pos.Y + 13), Color.White);
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrade2, new Vector2(button3pos.X - 120, button3pos.Y + 13), Color.White);
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrade3, new Vector2(button4pos.X - 120, button4pos.Y + 13), Color.White);
