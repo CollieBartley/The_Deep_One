@@ -427,10 +427,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button3Pressedtick == 1 && soulsadd == false)
+                switch (button3Pressedtick == 1 && soulsadd == false && souls >= 150)
                 {
                 case true:
                     upgrade2++;
+                    souls -= 150;
                     soulsadd = true;
                     break;
                 default:
@@ -472,10 +473,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button4Pressedtick == 1 && soulsadd == false)
+                switch (button4Pressedtick == 1 && soulsadd == false && souls >= 500)
                 {
                 case true:
                     upgrade3++;
+                    souls -= 1000;
                     soulsadd = true;
                     break;
                 default:
@@ -517,10 +519,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button5Pressedtick == 1 && soulsadd == false)
+                switch (button5Pressedtick == 1 && soulsadd == false && souls >= 10000)
                 {
                 case true:
                     upgrade4++;
+                    souls -= 10000;
                     soulsadd = true;
                     break;
                 default:
@@ -562,10 +565,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button6Pressedtick == 1 && soulsadd == false)
+                switch (button6Pressedtick == 1 && soulsadd == false && souls >= 100000)
                 {
                 case true:
                     upgrade5++;
+                    souls -= 100000;
                     soulsadd = true;
                     break;
                 default:
@@ -607,10 +611,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button7Pressedtick == 1 && soulsadd == false)
+                switch (button7Pressedtick == 1 && soulsadd == false && souls >= 1000000)
                 {
                 case true:
                     upgrade6++;
+                    souls -= 1000000;
                     soulsadd = true;
                     break;
                 default:
@@ -652,10 +657,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button8Pressedtick == 1 && soulsadd == false)
+                switch (button8Pressedtick == 1 && soulsadd == false && souls >= 10000000)
                 {
                 case true:
                     upgrade7++;
+                    souls -= 10000000;
                     soulsadd = true;
                     break;
                 default:
@@ -697,10 +703,11 @@ namespace Incremental_Game
                     break;
                 }
 
-                switch (button9Pressedtick == 1 && soulsadd == false)
+                switch (button9Pressedtick == 1 && soulsadd == false && souls >= 1000000000)
                 {
                 case true:
                     upgrade8++;
+                    souls -= 1000000000;
                     soulsadd = true;
                     break;
                 default:
