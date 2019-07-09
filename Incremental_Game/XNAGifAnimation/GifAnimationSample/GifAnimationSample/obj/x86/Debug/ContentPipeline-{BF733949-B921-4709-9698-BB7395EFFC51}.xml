@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>anim1.gif</Source>
+      <Name>anim1</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Processor>GifAnimationProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\Content\anim1.xnb</Output>
+      <Time>2011-11-19T23:37:49.7272126+03:30</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{BF733949-B921-4709-9698-BB7395EFFC51}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSampleContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+04:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30+04:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+04:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+04:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+04:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30+04:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.dll</Key>
+        <Value>2011-11-19T23:42:20.4986999+03:30</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-09-29T22:55:24.6499261+03:30</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

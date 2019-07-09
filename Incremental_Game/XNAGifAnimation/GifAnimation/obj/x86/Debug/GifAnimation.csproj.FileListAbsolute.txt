@@ -1,0 +1,12 @@
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation\bin\x86\Debug\GifAnimation.dll
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation\bin\x86\Debug\GifAnimation.pdb
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation\obj\x86\Debug\GifAnimation.dll
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation\obj\x86\Debug\GifAnimation.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation\bin\x86\Debug\GifAnimation.dll
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation\bin\x86\Debug\GifAnimation.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation\obj\x86\Debug\GifAnimation.dll
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation\obj\x86\Debug\GifAnimation.pdb

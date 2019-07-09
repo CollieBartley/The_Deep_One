@@ -1,0 +1,14 @@
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.dll
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.pdb
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\obj\x86\Debug\GifAnimation.Pipeline.dll
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\obj\x86\Debug\GifAnimation.Pipeline.pdb
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.dll
+E:\Taktaa\GifAnimation.Pipeline\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.dll
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.Pipeline.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.dll
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\bin\x86\Debug\GifAnimation.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\obj\x86\Debug\GifAnimation.Pipeline.dll
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimation.Pipeline\obj\x86\Debug\GifAnimation.Pipeline.pdb

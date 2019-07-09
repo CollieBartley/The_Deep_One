@@ -81,6 +81,12 @@ namespace The_Deep_One
         public int button10Pressedtick = 0;
         public int button10Releasedtick = 0;
         public int completetick = 0;
+
+        public Texture2D button11;
+        public Texture2D button11Pressed;
+        public Rectangle button11pos;
+        public int button11Pressedtick = 0;
+        public int button11Releasedtick = 0;
         #endregion 
 
         public Texture2D temp;
@@ -91,7 +97,7 @@ namespace The_Deep_One
         public int MouseX, MouseY;
         public int debug = 0;
 
-        public Int64 souls = 9999999999;
+        public Int64 souls = 0;
         public bool soulsadd = false;
         public int upgrade1 = 0;
         public int upgrade2 = 0;
@@ -135,6 +141,7 @@ namespace The_Deep_One
 
             temp = Content.Load<Texture2D>("temp");
             logo = Content.Load<Texture2D>("logo");
+            rect = Content.Load<Texture2D>("rect");
 
             #region BUTTONS POS AND LOAD
             button1 = Content.Load<Texture2D>("button");
@@ -206,6 +213,13 @@ namespace The_Deep_One
             button10pos.Y = 800;
             button10pos.Width = 250;
             button10pos.Height = 54;
+
+            button11 = Content.Load<Texture2D>("button");
+            button11Pressed = Content.Load<Texture2D>("buttonPressed");
+            button11pos.X = 675;
+            button11pos.Y = 500;
+            button11pos.Width = 250;
+            button11pos.Height = 54;
             #endregion 
 
             font = Content.Load<SpriteFont>("font");
@@ -302,6 +316,15 @@ namespace The_Deep_One
                     break;
             }
 
+            switch (souls < 0)
+            {
+                case true:
+                    souls = 0;
+                    break;
+                default:
+                    break;
+            }
+
             switch (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 case true:
@@ -329,8 +352,8 @@ namespace The_Deep_One
                     break;
             }
 
-            //Mouse position state
-            MouseY = Mouse.GetState().Y;
+                //Mouse position state
+                MouseY = Mouse.GetState().Y;
                 MouseX = Mouse.GetState().X;
 
                 //Mouse clicking
@@ -761,40 +784,123 @@ namespace The_Deep_One
             #endregion
 
                 #region COMPLETE BUTTON
-                switch (MouseDest.Intersects(button10pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (completetick >= 1)
+                {
+                case true:
+                    switch (MouseDest.Intersects(button10pos) && (newState.LeftButton == ButtonState.Pressed))
+                    {
+                        case true:
+                            button10Pressedtick = 1;
+                            break;
+                        case false:
+                            button10Pressedtick = 0;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    switch (MouseDest.Intersects(button10pos) && (newState.LeftButton == ButtonState.Released))
+                    {
+                        case true:
+                            button10Releasedtick = 1;
+                            break;
+                        case false:
+                            button10Releasedtick = 0;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    switch (button10Pressedtick == 1 && soulsadd == false)
+                    {
+                        case true:
+                            completetick = 2;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    switch (button10Releasedtick == 1 && soulsadd == true)
+                    {
+                        case true:
+                            soulsadd = false;
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+                }
+                #endregion
+
+                #region RESET BUTTON
+                switch (MouseDest.Intersects(button11pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
                     case true:
-                        button10Pressedtick = 1;
+                        button11Pressedtick = 1;
                         break;
                     case false:
+                        button11Pressedtick = 0;
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (MouseDest.Intersects(button11pos) && (newState.LeftButton == ButtonState.Released))
+                {
+                    case true:
+                        button11Releasedtick = 1;
+                        break;
+                    case false:
+                        button11Releasedtick = 0;
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (button11Pressedtick == 1 && soulsadd == false)
+                {
+                    case true:
+                        completetick = 0;
+                        endstate = 0;
+                        souls = 0;
+                        upgrade1 = 0;
+                        upgrade2 = 0;
+                        upgrade3 = 0;
+                        upgrade4 = 0;
+                        upgrade5 = 0;
+                        upgrade6 = 0;
+                        upgrade7 = 0;
+                        upgrade8 = 0;
+                        button1Pressedtick = 0;
+                        button1Releasedtick = 0;
+                        button2Pressedtick = 0;
+                        button2Releasedtick = 0;
+                        button3Pressedtick = 0;
+                        button3Releasedtick = 0;
+                        button4Pressedtick = 0;
+                        button4Releasedtick = 0;
+                        button5Pressedtick = 0;
+                        button5Releasedtick = 0;
+                        button6Pressedtick = 0;
+                        button6Releasedtick = 0;
+                        button7Pressedtick = 0;
+                        button7Releasedtick = 0;
+                        button8Pressedtick = 0;
+                        button8Releasedtick = 0;
+                        button9Pressedtick = 0;
+                        button9Releasedtick = 0;
                         button10Pressedtick = 0;
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (MouseDest.Intersects(button10pos) && (newState.LeftButton == ButtonState.Released))
-                {
-                    case true:
-                        button10Releasedtick = 1;
-                        break;
-                    case false:
                         button10Releasedtick = 0;
+                        button11Pressedtick = 0;
+                        button11Releasedtick = 0;
                         break;
                     default:
                         break;
                 }
 
-                switch (button10Pressedtick == 1 && soulsadd == false)
-                {
-                    case true:
-                        completetick = 2;
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (button9Releasedtick == 1 && soulsadd == true)
+                switch (button11Releasedtick == 1 && soulsadd == true)
                 {
                     case true:
                         soulsadd = false;
@@ -816,6 +922,7 @@ namespace The_Deep_One
 
             //spriteBatch.Draw(temp, new Rectangle(0, 0, Screen.Width, Screen.Height), Color.White);
             spriteBatch.Draw(logo, new Rectangle(1100, 445, 655, 655), Color.White);
+            spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
 
             #region BUTTON DRAWING
             spriteBatch.Draw(button1, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
@@ -918,6 +1025,8 @@ namespace The_Deep_One
                 default:
                     break;
             }
+
+
             #endregion
 
             #region BUTTON QUANTITY TEXT
@@ -942,12 +1051,14 @@ namespace The_Deep_One
             spriteBatch.DrawString(font, "1M - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
             spriteBatch.DrawString(font, "10M - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
             spriteBatch.DrawString(font, "100M - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
+            
             #endregion
 
             switch (souls >= 10000000000)
             {
                 case true:
                     spriteBatch.DrawString(fontlarge, "Souls: 10000000000", new Vector2(15, 15), Color.White);
+                    spriteBatch.DrawString(fontlarge, "Continue?", new Vector2(button10pos.X + 70, button10pos.Y + 12), Color.White);
                     break;
                 case false:
                     spriteBatch.DrawString(fontlarge, "Souls: " + souls, new Vector2(15, 15), Color.White);
@@ -955,9 +1066,26 @@ namespace The_Deep_One
                 default:
                     break;
             }
-            
-            spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
-            spriteBatch.DrawString(fontlarge, "test" + endstate, new Vector2(0, 0), Color.White);
+
+            switch (endstate >= 1)
+            {
+                case true:
+                    spriteBatch.Draw(rect, new Rectangle(0, 0, 1600, 900), Color.Black);
+                    spriteBatch.DrawString(fontlarge, "The Deep One is pleased", new Vector2(665, 400), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (endstate == 1)
+            {
+                case true:
+                    spriteBatch.Draw(button11, new Rectangle(button11pos.X, button11pos.Y, button11pos.Width, button11pos.Height), Color.White);
+                    spriteBatch.DrawString(fontlarge, "Reset", new Vector2(button11pos.X + 95, button11pos.Y + 12), Color.White);
+                    break;
+                default:
+                    break;
+            }
 
             #region DEBUG MOUSE
             spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 820), Color.White);

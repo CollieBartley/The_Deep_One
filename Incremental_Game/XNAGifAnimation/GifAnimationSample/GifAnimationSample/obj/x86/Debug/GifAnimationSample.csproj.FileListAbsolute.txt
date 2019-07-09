@@ -1,0 +1,9 @@
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\Content\anim1.xnb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\GifAnimationSample.exe
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\GifAnimationSample.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\GifAnimation.dll
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\bin\x86\Debug\GifAnimation.pdb
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\obj\x86\Debug\GifAnimationSample.exe
+C:\Users\Mahdi\Desktop\XNAGifAnimation\GifAnimationSample\GifAnimationSample\obj\x86\Debug\GifAnimationSample.pdb
