@@ -202,65 +202,97 @@ namespace Incremental_Game
         protected override void Update(GameTime gameTime)
         {
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (timeSinceLastUpdate >= millisecondsPerFrame)
+            switch (timeSinceLastUpdate >= millisecondsPerFrame)
             {
-                timeSinceLastUpdate = 0;
+                case true:
+                    timeSinceLastUpdate = 0;
+                    #region UPGRADES
+                    switch (upgrade1 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 5);
+                            break;
+                        default:
+                            break;
+                    }
 
-                #region UPGRADES
-                if (upgrade1 > 0)
-                {
-                    souls += (upgrade1 * 5);
+                    switch (upgrade2 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 10);
+                            break;
+                        default:
+                            break;
+                    }
 
-                }
+                    switch (upgrade3 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 50);
+                            break;
+                        default:
+                            break;
+                    }
 
-                if (upgrade2 > 0)
-                {
-                    souls += (upgrade1 * 10);
+                    switch (upgrade4 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 100);
+                            break;
+                        default:
+                            break;
+                    }
 
-                }
+                    switch (upgrade5 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 1000);
+                            break;
+                        default:
+                            break;
+                    }
 
-                if (upgrade3 > 0)
-                {
-                    souls += (upgrade1 * 50);
+                    switch (upgrade6 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 10000);
+                            break;
+                        default:
+                            break;
+                    }
 
-                }
+                    switch (upgrade7 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 100000);
+                            break;
+                        default:
+                            break;
+                    }
 
-                if (upgrade4 > 0)
-                {
-                    souls += (upgrade1 * 100);
-
-                }
-
-                if (upgrade5 > 0)
-                {
-                    souls += (upgrade1 * 1000);
-
-                }
-
-                if (upgrade6 > 0)
-                {
-                    souls += (upgrade1 * 10000);
-
-                }
-
-                if (upgrade7 > 0)
-                {
-                    souls += (upgrade1 * 100000);
-
-                }
-
-                if (upgrade8 > 0)
-                {
-                    souls += (upgrade1 * 1000000);
-
-                }
-                #endregion
-
+                    switch (upgrade8 > 0)
+                    {
+                        case true:
+                            souls += (upgrade1 * 1000000);
+                            break;
+                        default:
+                            break;
+                    }
+                        #endregion
+                    break;
+                default:
+                    break;
             }
 
-                if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            switch (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                case true:
                     Exit();
-
+                    break;
+                default:
+                    break;
+            }
+            
                 //Mouse position state
                 MouseY = Mouse.GetState().Y;
                 MouseX = Mouse.GetState().X;
@@ -268,289 +300,420 @@ namespace Incremental_Game
                 //Mouse clicking
                 MouseState newState = Mouse.GetState();
 
-                if (newState.LeftButton == ButtonState.Pressed)
+                switch (newState.LeftButton == ButtonState.Pressed)
                 {
+                case true:
                     MouseDest.X = MouseX;
                     MouseDest.Y = MouseY;
+                    break;
+                default:
+                    break;
                 }
 
                 #region BUTTON 1 INTERACTION - Clicker
 
-                if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button1Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button1Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button1Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button1Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button1Pressedtick == 1 && soulsadd == false)
+                switch (button1Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     souls++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button1Releasedtick == 1 && soulsadd == true)
+                switch (button1Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 2 INTERACTION - Upgrade 1
-                if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button2Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button2Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button2Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button2Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button2Pressedtick == 1 && soulsadd == false)
+                switch (button2Pressedtick == 1 && soulsadd == false && souls >= 50)
                 {
+                case true:
                     upgrade1++;
+                    souls -= 50;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button2Releasedtick == 1 && soulsadd == true)
+                switch (button2Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 3 INTERACTION - Upgrade 2
-                if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button3Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button3Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button3Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button3Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button3Pressedtick == 1 && soulsadd == false)
+                switch (button3Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade2++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button3Releasedtick == 1 && soulsadd == true)
+                switch (button3Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 4 INTERACTION - Upgrade 3
-                if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button4Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button4Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button4Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button4Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button4Pressedtick == 1 && soulsadd == false)
+                switch (button4Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade3++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button4Releasedtick == 1 && soulsadd == true)
+                switch (button4Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 5 INTERACTION - Upgrade 4
-                if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button5Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button5Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button5Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button5Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button5Pressedtick == 1 && soulsadd == false)
+                switch (button5Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade4++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button5Releasedtick == 1 && soulsadd == true)
+                switch (button5Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 6 INTERACTION - Upgrade 5
-                if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button6Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button6Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button6Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button6Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button6Pressedtick == 1 && soulsadd == false)
+                switch (button6Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade5++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button6Releasedtick == 1 && soulsadd == true)
+                switch (button6Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
             #endregion
 
                 #region BUTTON 7 INTERACTION - Upgrade 6
-                if (MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button7Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button7Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button7Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button7Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button7Pressedtick == 1 && soulsadd == false)
+                switch (button7Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade6++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button7Releasedtick == 1 && soulsadd == true)
+                switch (button7Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 8 INTERACTION - Upgrade 7
-                if (MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button8Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button8Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button8Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button8Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button8Pressedtick == 1 && soulsadd == false)
+                switch (button8Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade7++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button8Releasedtick == 1 && soulsadd == true)
+                switch (button8Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
                 #region BUTTON 9 INTERACTION - Upgrade 8
-                if (MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Pressed))
+                switch (MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Pressed))
                 {
+                case true:
                     button9Pressedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button9Pressedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Released))
+                switch (MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Released))
                 {
+                case true:
                     button9Releasedtick = 1;
-                }
-                else
-                {
+                    break;
+                case false:
                     button9Releasedtick = 0;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button9Pressedtick == 1 && soulsadd == false)
+                switch (button9Pressedtick == 1 && soulsadd == false)
                 {
+                case true:
                     upgrade8++;
                     soulsadd = true;
+                    break;
+                default:
+                    break;
                 }
 
-                if (button9Releasedtick == 1 && soulsadd == true)
+                switch (button9Releasedtick == 1 && soulsadd == true)
                 {
+                case true:
                     soulsadd = false;
+                    break;
+                default:
+                    break;
                 }
                 #endregion
 
@@ -579,49 +742,85 @@ namespace Incremental_Game
             spriteBatch.Draw(button8, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
             spriteBatch.Draw(button9, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
 
-            if (button1Pressedtick == 1)
+            switch (button1Pressedtick)
             {
-                spriteBatch.Draw(button1Pressed, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button1Pressed, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button2Pressedtick == 1)
+            switch (button2Pressedtick)
             {
-                spriteBatch.Draw(button2Pressed, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button2Pressed, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button3Pressedtick == 1)
+            switch (button3Pressedtick)
             {
-                spriteBatch.Draw(button3Pressed, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button3Pressed, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button4Pressedtick == 1)
+            switch (button4Pressedtick)
             {
-                spriteBatch.Draw(button4Pressed, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button4Pressed, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button5Pressedtick == 1)
+            switch (button5Pressedtick)
             {
-                spriteBatch.Draw(button5Pressed, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button5Pressed, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button6Pressedtick == 1)
+            switch (button6Pressedtick)
             {
-                spriteBatch.Draw(button6Pressed, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button6Pressed, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button7Pressedtick == 1)
+            switch (button7Pressedtick)
             {
-                spriteBatch.Draw(button7Pressed, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button7Pressed, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button8Pressedtick == 1)
+            switch (button8Pressedtick)
             {
-                spriteBatch.Draw(button8Pressed, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button8Pressed, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
 
-            if (button9Pressedtick == 1)
+            switch (button9Pressedtick)
             {
-                spriteBatch.Draw(button9Pressed, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
+                case 1:
+                    spriteBatch.Draw(button9Pressed, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
+                    break;
+                default:
+                    break;
             }
             #endregion
 
@@ -630,13 +829,16 @@ namespace Incremental_Game
             spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 860), Color.White);
             spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 880), Color.White);
 
-            if (newState.LeftButton == ButtonState.Pressed)
+            switch (newState.LeftButton == ButtonState.Pressed)
             {
-                spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 840), Color.White);
-            }
-            else
-            {
+                case true:
+                    spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 840), Color.White);
+                    break;
+                case false:
                 spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 840), Color.White);
+                    break;
+                default:
+                    break;
             }
             #endregion
 
