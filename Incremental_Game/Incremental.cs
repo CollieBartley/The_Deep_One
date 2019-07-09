@@ -81,7 +81,6 @@ namespace Incremental_Game
         // Mouse
         public Rectangle MouseDest;
         public int MouseX, MouseY;
-        private MouseState oldState;
 
         public int souls = 0;
         public bool soulsadd = false;
@@ -219,7 +218,7 @@ namespace Incremental_Game
                     switch (upgrade2 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 10);
+                            souls += (upgrade2 * 10);
                             break;
                         default:
                             break;
@@ -228,7 +227,7 @@ namespace Incremental_Game
                     switch (upgrade3 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 50);
+                            souls += (upgrade3 * 50);
                             break;
                         default:
                             break;
@@ -237,7 +236,7 @@ namespace Incremental_Game
                     switch (upgrade4 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 100);
+                            souls += (upgrade4 * 100);
                             break;
                         default:
                             break;
@@ -246,7 +245,7 @@ namespace Incremental_Game
                     switch (upgrade5 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 1000);
+                            souls += (upgrade5 * 1000);
                             break;
                         default:
                             break;
@@ -255,7 +254,7 @@ namespace Incremental_Game
                     switch (upgrade6 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 10000);
+                            souls += (upgrade6 * 10000);
                             break;
                         default:
                             break;
@@ -264,7 +263,7 @@ namespace Incremental_Game
                     switch (upgrade7 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 100000);
+                            souls += (upgrade7 * 100000);
                             break;
                         default:
                             break;
@@ -273,7 +272,7 @@ namespace Incremental_Game
                     switch (upgrade8 > 0)
                     {
                         case true:
-                            souls += (upgrade1 * 1000000);
+                            souls += (upgrade8 * 1000000);
                             break;
                         default:
                             break;
@@ -829,6 +828,17 @@ namespace Incremental_Game
                 default:
                     break;
             }
+            #endregion
+
+            #region BUTTON TEXT
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade1, new Vector2(button2pos.X - 120, button2pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade2, new Vector2(button3pos.X - 120, button3pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade3, new Vector2(button4pos.X - 120, button4pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade4, new Vector2(button5pos.X - 120, button5pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade5, new Vector2(button6pos.X - 120, button6pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade6, new Vector2(button7pos.X - 120, button7pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade7, new Vector2(button8pos.X - 120, button8pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrade8, new Vector2(button9pos.X - 120, button9pos.Y + 13), Color.White);
             #endregion
 
             #region DEBUG MOUSE
