@@ -108,6 +108,8 @@ namespace The_Deep_One
         public int upgrade7 = 0;
         public int upgrade8 = 0;
 
+        public int news = 0;
+
         public int endstate = 0;
 
         private SpriteFont font;
@@ -233,6 +235,7 @@ namespace The_Deep_One
 
         protected override void Update(GameTime gameTime)
         {
+            //Changes Time
             timeSinceLastUpdate += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
             switch (timeSinceLastUpdate >= millisecondsPerFrame)
             {
@@ -316,6 +319,7 @@ namespace The_Deep_One
                     break;
             }
 
+            #region LOOPS
             switch (souls < 0)
             {
                 case true:
@@ -351,9 +355,10 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-                //Mouse position state
-                MouseY = Mouse.GetState().Y;
+            //Mouse position state
+            MouseY = Mouse.GetState().Y;
                 MouseX = Mouse.GetState().X;
 
                 //Mouse clicking
@@ -863,6 +868,7 @@ namespace The_Deep_One
                 {
                     case true:
                         completetick = 0;
+                        news = 0;
                         endstate = 0;
                         souls = 0;
                         upgrade1 = 0;
