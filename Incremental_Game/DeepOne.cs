@@ -1087,22 +1087,22 @@ namespace The_Deep_One
                     break;
             }
 
-            #region DEBUG MOUSE
-            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 820), Color.White);
-                    spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 840), Color.White);
+            //#region DEBUG MOUSE
+            //spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 820), Color.White);
+            //        spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 840), Color.White);
 
-                    switch (newState.LeftButton == ButtonState.Pressed)
-                    {
-                        case true:
-                            spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 800), Color.White);
-                            break;
-                        case false:
-                            spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 800), Color.White);
-                            break;
-                        default:
-                            break;
-                    }
-            #endregion
+            //        switch (newState.LeftButton == ButtonState.Pressed)
+            //        {
+            //            case true:
+            //                spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 800), Color.White);
+            //                break;
+            //            case false:
+            //                spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 800), Color.White);
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //#endregion
 
             spriteBatch.End();
 
