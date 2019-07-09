@@ -129,63 +129,63 @@ namespace Incremental_Game
             button1Pressed = Content.Load<Texture2D>("buttonPressed");
             button1pos.X = 1318;
             button1pos.Y = 56;
-            button1pos.Width = 213;
+            button1pos.Width = 250;
             button1pos.Height = 54;
 
             button2 = Content.Load<Texture2D>("button");
             button2Pressed = Content.Load<Texture2D>("buttonPressed");
             button2pos.X = 1318;
             button2pos.Y = 122;
-            button2pos.Width = 213;
+            button2pos.Width = 250;
             button2pos.Height = 54;
 
             button3 = Content.Load<Texture2D>("button");
             button3Pressed = Content.Load<Texture2D>("buttonPressed");
             button3pos.X = 1318;
             button3pos.Y = 187;
-            button3pos.Width = 213;
+            button3pos.Width = 250;
             button3pos.Height = 54;
 
             button4 = Content.Load<Texture2D>("button");
             button4Pressed = Content.Load<Texture2D>("buttonPressed");
             button4pos.X = 1318;
             button4pos.Y = 254;
-            button4pos.Width = 213;
+            button4pos.Width = 250;
             button4pos.Height = 54;
 
             button5 = Content.Load<Texture2D>("button");
             button5Pressed = Content.Load<Texture2D>("buttonPressed");
             button5pos.X = 1318;
             button5pos.Y = 320;
-            button5pos.Width = 213;
+            button5pos.Width = 250;
             button5pos.Height = 54;
 
             button6 = Content.Load<Texture2D>("button");
             button6Pressed = Content.Load<Texture2D>("buttonPressed");
             button6pos.X = 1318;
             button6pos.Y = 386;
-            button6pos.Width = 213;
+            button6pos.Width = 250;
             button6pos.Height = 54;
 
             button7 = Content.Load<Texture2D>("button");
             button7Pressed = Content.Load<Texture2D>("buttonPressed");
             button7pos.X = 1318;
             button7pos.Y = 452;
-            button7pos.Width = 213;
+            button7pos.Width = 250;
             button7pos.Height = 54;
 
             button8 = Content.Load<Texture2D>("button");
             button8Pressed = Content.Load<Texture2D>("buttonPressed");
             button8pos.X = 1318;
             button8pos.Y = 518;
-            button8pos.Width = 213;
+            button8pos.Width = 250;
             button8pos.Height = 54;
 
             button9 = Content.Load<Texture2D>("button");
             button9Pressed = Content.Load<Texture2D>("buttonPressed");
             button9pos.X = 1318;
             button9pos.Y = 584;
-            button9pos.Width = 213;
+            button9pos.Width = 250;
             button9pos.Height = 54;
             #endregion 
 
@@ -839,6 +839,19 @@ namespace Incremental_Game
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrade6, new Vector2(button7pos.X - 120, button7pos.Y + 13), Color.White);
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrade7, new Vector2(button8pos.X - 120, button8pos.Y + 13), Color.White);
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrade8, new Vector2(button9pos.X - 120, button9pos.Y + 13), Color.White);
+            #endregion
+
+            #region BUTTON TEXT
+            spriteBatch.DrawString(font, "Slaughter in the name of", new Vector2(button1pos.X + 35, button1pos.Y + 9), Color.White);
+            spriteBatch.DrawString(font, "The Deep One", new Vector2(button1pos.X + 75, button1pos.Y + 28), Color.White);
+            spriteBatch.DrawString(font, "$50 - Servitors of Cthulhu", new Vector2(button2pos.X + 10, button2pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$150 - Shoggoth", new Vector2(button3pos.X + 10, button3pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$1K - Dark Young", new Vector2(button4pos.X + 10, button4pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$10K - Star-Spawn of Cthulhu", new Vector2(button5pos.X + 10, button5pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$100K - Dimensional Shambler", new Vector2(button6pos.X + 10, button6pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$1M - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$10M - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, "$100M - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
             #endregion
 
             #region DEBUG MOUSE
