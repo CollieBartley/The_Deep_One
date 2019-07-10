@@ -10,21 +10,20 @@ using System.Linq;
 
 namespace The_Deep_One
 {
-    public class Buttons/* : Game*/
+    public class Buttons
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         ContentManager Content;
 
-        Souls souls = new Souls();
+        Souls souls;
         DeepOne deepone;
-        
-
 
         private SpriteFont font;
         private SpriteFont fontlarge;
         public Rectangle Screen;
 
+        #region BUTTON POS & TICK
         public Texture2D button1;
         public Texture2D button1Pressed;
         public Rectangle button1pos;
@@ -91,21 +90,24 @@ namespace The_Deep_One
         public Rectangle button11pos;
         public int button11Pressedtick = 0;
         public int button11Releasedtick = 0;
+        #endregion
 
         public Buttons()
         {
             Content.RootDirectory = "Content";
         }
-        public Buttons(DeepOne deepOne, GraphicsDeviceManager grphcs, SpriteBatch sprtBatch, ContentManager content)
+        public Buttons(DeepOne deepOne, GraphicsDeviceManager grphcs, SpriteBatch sprtBatch, ContentManager content, Souls p_souls)
         {
             deepone = deepOne;
             graphics = grphcs;
             spriteBatch = sprtBatch;
             Content = content;
+            souls = p_souls;
         }
 
         public void LoadButtonContent()
         {
+            #region BUTTON LOAD
             button1 = Content.Load<Texture2D>("button");
             button1Pressed = Content.Load<Texture2D>("buttonPressed");
             button1pos.X = 1318;
@@ -182,6 +184,7 @@ namespace The_Deep_One
             button11pos.Y = 500;
             button11pos.Width = 250;
             button11pos.Height = 54;
+            #endregion
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
@@ -191,6 +194,7 @@ namespace The_Deep_One
         {
             MouseState newState = Mouse.GetState();
 
+            #region BUTTON UPDATES
             // Button 1 - Clicker
             switch (deepone.MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
             {
@@ -720,6 +724,7 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
         }
 
         public void Draw(GameTime gameTime)
