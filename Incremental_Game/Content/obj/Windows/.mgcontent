@@ -4,37 +4,20 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/button.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/buttonPressed.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/font.spritefont</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/fontlarge.spritefont</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/logo.PNG</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News1.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News2.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News3.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News4.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News5.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News6.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News7.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/News8.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/rect.png</File>
-    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/temp.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/button.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/buttonPressed.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/font.spritefont</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/fontlarge.spritefont</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/logo.PNG</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News1.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News2.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News3.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News4.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News5.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News6.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News7.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News8.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/rect.png</File>
+    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/temp.png</File>
   </SourceFiles>
-  <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-  </DestFiles>
 </SourceFileCollection>
