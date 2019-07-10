@@ -45,3 +45,11 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\News7.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\News8.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Release\The_Deep_One.csprojAssemblyReference.cache
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\1.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\2.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\3.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\4.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\5.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\6.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\7.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\Content\8.xnb

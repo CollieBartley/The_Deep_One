@@ -75,3 +75,11 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\Th
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CopyComplete
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.exe
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.pdb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\1.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\2.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\3.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\4.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\5.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\6.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\7.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\8.xnb

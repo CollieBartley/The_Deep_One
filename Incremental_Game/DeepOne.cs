@@ -18,6 +18,8 @@ namespace The_Deep_One
         int millisecondsPerFrame = 1000; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
 
+        
+
         public Texture2D rect;
 
         #region BUTTON TEX2D, RECT & TICK
@@ -98,8 +100,8 @@ namespace The_Deep_One
         public int debug = 0;
 
         // Souls
-        public Int64 souls = 0;
-        public bool soulsadd = false;
+        Souls souls = new Souls();
+        
 
         // Upgrades
         public int upgrade1 = 0;
@@ -122,6 +124,25 @@ namespace The_Deep_One
         public Texture2D news6;
         public Texture2D news7;
         public Texture2D news8;
+
+        // Images
+        public int imagetick = 0;
+        public Texture2D image1;
+        public Rectangle image1pos;
+        public Texture2D image2;
+        public Rectangle image2pos;
+        public Texture2D image3;
+        public Rectangle image3pos;
+        public Texture2D image4;
+        public Rectangle image4pos;
+        public Texture2D image5;
+        public Rectangle image5pos;
+        public Texture2D image6;
+        public Rectangle image6pos;
+        public Texture2D image7;
+        public Rectangle image7pos;
+        public Texture2D image8;
+        public Rectangle image8pos;
 
         public int endstate = 0;
 
@@ -252,6 +273,49 @@ namespace The_Deep_One
             newspos.Height = 551;
             #endregion
 
+            #region IMAGES LOAD
+            image1 = Content.Load<Texture2D>("1");
+            image1pos.X = 340;
+            image1pos.Y = 130;
+            image1pos.Width = 850;
+            image1pos.Height = 601;
+            image2 = Content.Load<Texture2D>("2");
+            image2pos.X = 352;
+            image2pos.Y = 140;
+            image2pos.Width = 832;
+            image2pos.Height = 514;
+            image3 = Content.Load<Texture2D>("3");
+            image3pos.X = 340;
+            image3pos.Y = 140;
+            image3pos.Width = 855;
+            image3pos.Height = 486;
+            image4 = Content.Load<Texture2D>("4");
+            image4pos.X = 320;
+            image4pos.Y = 140;
+            image4pos.Width = 855;
+            image4pos.Height = 486;
+            image5 = Content.Load<Texture2D>("5");
+            image5pos.X = 320;
+            image5pos.Y = 140;
+            image5pos.Width = 855;
+            image5pos.Height = 486;
+            image6 = Content.Load<Texture2D>("6");
+            image6pos.X = 320;
+            image6pos.Y = 140;
+            image6pos.Width = 855;
+            image6pos.Height = 486;
+            image7 = Content.Load<Texture2D>("7");
+            image7pos.X = 420;
+            image7pos.Y = 10;
+            image7pos.Width = 596;
+            image7pos.Height = 850;
+            image8 = Content.Load<Texture2D>("8");
+            image8pos.X = 500;
+            image8pos.Y = 70;
+            image8pos.Width = 601;
+            image8pos.Height = 768;
+            #endregion
+
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
         }
@@ -273,7 +337,7 @@ namespace The_Deep_One
                     switch (upgrade1 > 0)
                     {
                         case true:
-                            souls += (upgrade1 *2);
+                            souls.souls += (upgrade1 *2);
                             break;
                         default:
                             break;
@@ -282,7 +346,7 @@ namespace The_Deep_One
                     switch (upgrade2 > 0)
                     {
                         case true:
-                            souls += (upgrade2 * 10);
+                            souls.souls += (upgrade2 * 10);
                             break;
                         default:
                             break;
@@ -291,7 +355,7 @@ namespace The_Deep_One
                     switch (upgrade3 > 0)
                     {
                         case true:
-                            souls += (upgrade3 * 50);
+                            souls.souls += (upgrade3 * 50);
                             break;
                         default:
                             break;
@@ -300,7 +364,7 @@ namespace The_Deep_One
                     switch (upgrade4 > 0)
                     {
                         case true:
-                            souls += (upgrade4 * 100);
+                            souls.souls += (upgrade4 * 100);
                             break;
                         default:
                             break;
@@ -309,7 +373,7 @@ namespace The_Deep_One
                     switch (upgrade5 > 0)
                     {
                         case true:
-                            souls += (upgrade5 * 1000);
+                            souls.souls += (upgrade5 * 1000);
                             break;
                         default:
                             break;
@@ -318,7 +382,7 @@ namespace The_Deep_One
                     switch (upgrade6 > 0)
                     {
                         case true:
-                            souls += (upgrade6 * 10000);
+                            souls.souls += (upgrade6 * 10000);
                             break;
                         default:
                             break;
@@ -327,7 +391,7 @@ namespace The_Deep_One
                     switch (upgrade7 > 0)
                     {
                         case true:
-                            souls += (upgrade7 * 100000);
+                            souls.souls += (upgrade7 * 100000);
                             break;
                         default:
                             break;
@@ -336,7 +400,7 @@ namespace The_Deep_One
                     switch (upgrade8 > 0)
                     {
                         case true:
-                            souls += (upgrade8 * 1000000);
+                            souls.souls += (upgrade8 * 1000000);
                             break;
                         default:
                             break;
@@ -348,10 +412,10 @@ namespace The_Deep_One
             }
 
             #region LOOPS
-            switch (souls < 0)
+            switch (souls.souls < 0)
             {
                 case true:
-                    souls = 0;
+                    souls.souls = 0;
                     break;
                 default:
                     break;
@@ -366,7 +430,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls >= 10000000000)
+            switch (souls.souls >= 10000000000)
             {
                 case true:
                     completetick = 1;
@@ -428,20 +492,20 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button1Pressedtick == 1 && soulsadd == false)
+            switch (button1Pressedtick == 1 && souls.soulsadd == false)
             {
                 case true:
-                    souls++;
-                    soulsadd = true;
+                    souls.souls++;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button1Releasedtick == 1 && soulsadd == true)
+            switch (button1Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -473,21 +537,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button2Pressedtick == 1 && soulsadd == false && souls >= 50)
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50)
             {
                 case true:
                     upgrade1++;
-                    souls -= 50;
-                    soulsadd = true;
+                    souls.souls -= 50;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button2Releasedtick == 1 && soulsadd == true)
+            switch (button2Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -519,21 +583,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button3Pressedtick == 1 && soulsadd == false && souls >= 250)
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250)
             {
                 case true:
                     upgrade2++;
-                    souls -= 250;
-                    soulsadd = true;
+                    souls.souls -= 250;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button3Releasedtick == 1 && soulsadd == true)
+            switch (button3Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -565,21 +629,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button4Pressedtick == 1 && soulsadd == false && souls >= 500)
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500)
             {
                 case true:
                     upgrade3++;
-                    souls -= 1000;
-                    soulsadd = true;
+                    souls.souls -= 1000;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button4Releasedtick == 1 && soulsadd == true)
+            switch (button4Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -611,21 +675,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button5Pressedtick == 1 && soulsadd == false && souls >= 10000)
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000)
             {
                 case true:
                     upgrade4++;
-                    souls -= 10000;
-                    soulsadd = true;
+                    souls.souls -= 10000;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button5Releasedtick == 1 && soulsadd == true)
+            switch (button5Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -657,21 +721,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button6Pressedtick == 1 && soulsadd == false && souls >= 100000)
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000)
             {
                 case true:
                     upgrade5++;
-                    souls -= 100000;
-                    soulsadd = true;
+                    souls.souls -= 100000;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button6Releasedtick == 1 && soulsadd == true)
+            switch (button6Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -703,21 +767,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button7Pressedtick == 1 && soulsadd == false && souls >= 1000000)
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000)
             {
                 case true:
                     upgrade6++;
-                    souls -= 1000000;
-                    soulsadd = true;
+                    souls.souls -= 1000000;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button7Releasedtick == 1 && soulsadd == true)
+            switch (button7Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -749,21 +813,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button8Pressedtick == 1 && soulsadd == false && souls >= 10000000)
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000)
             {
                 case true:
                     upgrade7++;
-                    souls -= 10000000;
-                    soulsadd = true;
+                    souls.souls -= 10000000;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button8Releasedtick == 1 && soulsadd == true)
+            switch (button8Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -795,21 +859,21 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button9Pressedtick == 1 && soulsadd == false && souls >= 100000000)
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000)
             {
                 case true:
                     upgrade8++;
-                    souls -= 100000000;
-                    soulsadd = true;
+                    souls.souls -= 100000000;
+                    souls.soulsadd = true;
                     break;
                 default:
                     break;
             }
 
-            switch (button9Releasedtick == 1 && soulsadd == true)
+            switch (button9Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -844,7 +908,7 @@ namespace The_Deep_One
                             break;
                     }
 
-                    switch (button10Pressedtick == 1 && soulsadd == false)
+                    switch (button10Pressedtick == 1 && souls.soulsadd == false)
                     {
                         case true:
                             completetick = 2;
@@ -853,10 +917,10 @@ namespace The_Deep_One
                             break;
                     }
 
-                    switch (button10Releasedtick == 1 && soulsadd == true)
+                    switch (button10Releasedtick == 1 && souls.soulsadd == true)
                     {
                         case true:
-                            soulsadd = false;
+                            souls.soulsadd = false;
                             break;
                         default:
                             break;
@@ -892,13 +956,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button11Pressedtick == 1 && soulsadd == false)
+            switch (button11Pressedtick == 1 && souls.soulsadd == false)
             {
                 case true:
                     completetick = 0;
                     newstick = 0;
                     endstate = 0;
-                    souls = 0;
+                    souls.souls = 0;
                     upgrade1 = 0;
                     upgrade2 = 0;
                     upgrade3 = 0;
@@ -934,10 +998,10 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button11Releasedtick == 1 && soulsadd == true)
+            switch (button11Releasedtick == 1 && souls.soulsadd == true)
             {
                 case true:
-                    soulsadd = false;
+                    souls.soulsadd = false;
                     break;
                 default:
                     break;
@@ -945,7 +1009,7 @@ namespace The_Deep_One
             #endregion
 
             #region NEWS
-            switch (souls)
+            switch (souls.souls)
             {
                 case 1:
                     newstick = 1;
@@ -953,7 +1017,7 @@ namespace The_Deep_One
                 default:
                     break;
             }
-            switch (souls >= 100 && newstick == 1)
+            switch (souls.souls >= 200 && newstick == 1)
             {
                 case true:
                     newstick = 2;
@@ -961,7 +1025,7 @@ namespace The_Deep_One
                 default:
                     break;
             }
-            switch (souls >= 1000 && newstick == 2)
+            switch (souls.souls >= 1000 && newstick == 2)
             {
                 case true:
                     newstick = 3;
@@ -969,42 +1033,42 @@ namespace The_Deep_One
                 default:
                     break;
             }
-            switch (souls >= 10000 && newstick == 3)
+            switch (souls.souls >= 10000 && newstick == 3)
             {
                 case true:
-                    newstick = 3;
+                    newstick = 4;
                     break;
                 default:
                     break;
             }
-            switch (souls >= 100000 && newstick == 4)
+            switch (souls.souls >= 1000000 && newstick == 4)
             {
                 case true:
-                    newstick = 3;
+                    newstick = 5;
                     break;
                 default:
                     break;
             }
-            switch (souls >= 100000000 && newstick == 5)
+            switch (souls.souls >= 10000000 && newstick == 5)
             {
                 case true:
-                    newstick = 3;
+                    newstick = 6;
                     break;
                 default:
                     break;
             }
-            switch (souls >= 1000000000 && newstick == 6)
+            switch (souls.souls >= 1000000000 && newstick == 6)
             {
                 case true:
-                    newstick = 3;
+                    newstick = 7;
                     break;
                 default:
                     break;
             }
-            switch (souls >= 10000000000 && newstick == 7)
+            switch (souls.souls >= 10000000000 && newstick == 7)
             {
                 case true:
-                    newstick = 3;
+                    newstick = 8;
                     break;
                 default:
                     break;
@@ -1023,7 +1087,7 @@ namespace The_Deep_One
 
             //spriteBatch.Draw(temp, new Rectangle(0, 0, Screen.Width, Screen.Height), Color.White);
             spriteBatch.Draw(logo, new Rectangle(1100, 445, 655, 655), Color.White);
-            spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
+
 
             #region NEWS DRAWING
             switch (newstick)
@@ -1051,6 +1115,38 @@ namespace The_Deep_One
                     break;
                 case 8:
                     spriteBatch.Draw(news8, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region IMAGES DRAWING
+            switch (newstick)
+            {
+                case 1:
+                    spriteBatch.Draw(image1, new Rectangle(image1pos.X, image1pos.Y, image1pos.Width, image1pos.Height), Color.White);
+                    break;
+                case 2:
+                    spriteBatch.Draw(image2, new Rectangle(image2pos.X, image2pos.Y, image2pos.Width, image2pos.Height), Color.White);
+                    break;
+                case 3:
+                    spriteBatch.Draw(image3, new Rectangle(image3pos.X, image3pos.Y, image3pos.Width, image3pos.Height), Color.White);
+                    break;
+                case 4:
+                    spriteBatch.Draw(image4, new Rectangle(image4pos.X, image4pos.Y, image4pos.Width, image4pos.Height), Color.White);
+                    break;
+                case 5:
+                    spriteBatch.Draw(image5, new Rectangle(image5pos.X, image5pos.Y, image5pos.Width, image5pos.Height), Color.White);
+                    break;
+                case 6:
+                    spriteBatch.Draw(image6, new Rectangle(image6pos.X, image6pos.Y, image6pos.Width, image6pos.Height), Color.White);
+                    break;
+                case 7:
+                    spriteBatch.Draw(image7, new Rectangle(image7pos.X, image7pos.Y, image7pos.Width, image7pos.Height), Color.White);
+                    break;
+                case 8:
+                    spriteBatch.Draw(image8, new Rectangle(image8pos.X, image8pos.Y, image8pos.Width, image8pos.Height), Color.White);
                     break;
                 default:
                     break;
@@ -1187,15 +1283,17 @@ namespace The_Deep_One
 
             #endregion
 
+            spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
+
             #region END
-            switch (souls >= 10000000000)
+            switch (souls.souls >= 10000000000)
             {
                 case true:
                     spriteBatch.DrawString(fontlarge, "Souls: 10000000000", new Vector2(15, 15), Color.White);
                     spriteBatch.DrawString(fontlarge, "Continue?", new Vector2(button10pos.X + 70, button10pos.Y + 12), Color.White);
                     break;
                 case false:
-                    spriteBatch.DrawString(fontlarge, "Souls: " + souls, new Vector2(15, 15), Color.White);
+                    spriteBatch.DrawString(fontlarge, "Souls: " + souls.souls, new Vector2(15, 15), Color.White);
                     break;
                 default:
                     break;
@@ -1222,22 +1320,22 @@ namespace The_Deep_One
             }
             #endregion
 
-            #region DEBUG MOUSE
-            spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 820), Color.White);
-            spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 840), Color.White);
+            //#region DEBUG MOUSE
+            //spriteBatch.DrawString(font, "Mouse X: " + MouseX, new Vector2(0, 820), Color.White);
+            //spriteBatch.DrawString(font, "Mouse Y: " + MouseY, new Vector2(0, 840), Color.White);
 
-            switch (newState.LeftButton == ButtonState.Pressed)
-            {
-                case true:
-                    spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 800), Color.White);
-                    break;
-                case false:
-                    spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 800), Color.White);
-                    break;
-                default:
-                    break;
-            }
-            #endregion
+            //switch (newState.LeftButton == ButtonState.Pressed)
+            //{
+            //    case true:
+            //        spriteBatch.DrawString(font, "Mouse Pressed", new Vector2(0, 800), Color.White);
+            //        break;
+            //    case false:
+            //        spriteBatch.DrawString(font, "Mouse Released", new Vector2(0, 800), Color.White);
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //#endregion
 
             spriteBatch.End();
 
