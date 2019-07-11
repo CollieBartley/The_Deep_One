@@ -228,7 +228,7 @@ namespace The_Deep_One
                 case true:
                     souls.souls++;
                     souls.soulsadd = true;
-                    deepone.soundEffects[1].CreateInstance().Play();
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -274,6 +274,7 @@ namespace The_Deep_One
                     upgrades.upgrade1++;
                     souls.souls -= 50;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -319,6 +320,7 @@ namespace The_Deep_One
                     upgrades.upgrade2++;
                     souls.souls -= 250;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -364,6 +366,7 @@ namespace The_Deep_One
                     upgrades.upgrade3++;
                     souls.souls -= 1000;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -409,6 +412,7 @@ namespace The_Deep_One
                     upgrades.upgrade4++;
                     souls.souls -= 10000;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -454,6 +458,7 @@ namespace The_Deep_One
                     upgrades.upgrade5++;
                     souls.souls -= 100000;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -499,6 +504,7 @@ namespace The_Deep_One
                     upgrades.upgrade6++;
                     souls.souls -= 1000000;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -544,6 +550,7 @@ namespace The_Deep_One
                     upgrades.upgrade7++;
                     souls.souls -= 10000000;
                     souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;
@@ -588,6 +595,7 @@ namespace The_Deep_One
                 case true:
                     upgrades.upgrade8++;
                     souls.souls -= 100000000;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     souls.soulsadd = true;
                     break;
                 default:
@@ -635,6 +643,7 @@ namespace The_Deep_One
                     {
                         case true:
                             completetick = 2;
+                            deepone.soundEffects[0].CreateInstance().Play();
                             break;
                         default:
                             break;
@@ -715,6 +724,7 @@ namespace The_Deep_One
                     button10Releasedtick = 0;
                     button11Pressedtick = 0;
                     button11Releasedtick = 0;
+                    deepone.soundEffects[0].CreateInstance().Play();
                     break;
                 default:
                     break;

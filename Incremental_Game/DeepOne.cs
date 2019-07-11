@@ -36,6 +36,9 @@ namespace The_Deep_One
 
         public int endstate = 0;
 
+        //public List<SoundEffect> soundEffects;
+        public SoundEffect click, neWs;
+        public SoundEffectInstance clickInst, neWsInst;
         public List<SoundEffect> soundEffects;
 
         private SpriteFont font;
@@ -52,6 +55,7 @@ namespace The_Deep_One
             graphics.PreferredBackBufferHeight = 900;// Window Height
 
             soundEffects = new List<SoundEffect>();
+   
 
             this.IsMouseVisible = true;
         }
@@ -90,9 +94,12 @@ namespace The_Deep_One
             MediaPlayer.Volume -= 0.6f;
             MediaPlayer.Play(backgroundMusic);
 
-            soundEffects.Add(Content.Load<SoundEffect>("news"));
             soundEffects.Add(Content.Load<SoundEffect>("click"));
-            SoundEffect.MasterVolume = 0.4f;
+
+            neWs = Content.Load<SoundEffect>("news");
+            neWsInst = neWs.CreateInstance();
+
+            SoundEffect.MasterVolume = 0.2f;
         }
 
         protected override void UnloadContent()

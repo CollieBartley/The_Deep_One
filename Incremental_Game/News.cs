@@ -31,6 +31,15 @@ namespace The_Deep_One
         public Texture2D news7;
         public Texture2D news8;
 
+        private int newssound1 = 0;
+        private int newssound2 = 0;
+        private int newssound3 = 0;
+        private int newssound4 = 0;
+        private int newssound5 = 0;
+        private int newssound6 = 0;
+        private int newssound7 = 0;
+        private int newssound8 = 0;
+
         private SpriteFont font;
         private SpriteFont fontlarge;
         public Rectangle Screen;
@@ -139,13 +148,7 @@ namespace The_Deep_One
             }
             #endregion
 
-            switch (newstick)
-            {
-                case 1:
-                    break;
-                default:
-                    break;
-            }
+         
         }
 
         public void Draw(GameTime gameTime)
@@ -157,27 +160,99 @@ namespace The_Deep_One
             {
                 case 1:
                     spriteBatch.Draw(news1, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound1 == 0)
+                    {
+                    case true:
+                            deepone.neWsInst.Play();
+                            newssound1 = 1;
+                        break;
+                    default:
+                        break;
+                    }
                     break;
                 case 2:
                     spriteBatch.Draw(news2, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound2 == 0)
+                    {
+                    case true:
+                        deepone.neWsInst.Play();
+                        newssound2 = 1;
+                        break;
+                    default:
+                        break;
+                    }
                     break;
                 case 3:
                     spriteBatch.Draw(news3, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound3 == 0)
+                    {
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound3 = 1;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 4:
                     spriteBatch.Draw(news4, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound4 == 0)
+                    {
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound4 = 1;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 5:
                     spriteBatch.Draw(news5, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound5 == 0)
+                    {
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound5 = 1;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 6:
                     spriteBatch.Draw(news6, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound6 == 0)
+                    {
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound6 = 1;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 7:
                     spriteBatch.Draw(news7, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound7 == 0)
+                    {
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound7 = 1;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 8:
                     spriteBatch.Draw(news8, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    switch (deepone.neWsInst.State == SoundState.Stopped && newssound8 == 0)
+                    {
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound8 = 1;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 default:
                     break;
