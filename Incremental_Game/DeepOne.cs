@@ -30,6 +30,7 @@ namespace The_Deep_One
 
         Souls souls = new Souls();
         Buttons buttons;
+        News news;
 
         // Upgrades
         public int upgrade1 = 0;
@@ -42,16 +43,16 @@ namespace The_Deep_One
         public int upgrade8 = 0;
 
         // News
-        public int newstick = 0;
-        public Rectangle newspos;
-        public Texture2D news1;
-        public Texture2D news2;
-        public Texture2D news3;
-        public Texture2D news4;
-        public Texture2D news5;
-        public Texture2D news6;
-        public Texture2D news7;
-        public Texture2D news8;
+        //public int newstick = 0;
+        //public Rectangle newspos;
+        //public Texture2D news1;
+        //public Texture2D news2;
+        //public Texture2D news3;
+        //public Texture2D news4;
+        //public Texture2D news5;
+        //public Texture2D news6;
+        //public Texture2D news7;
+        //public Texture2D news8;
 
         // Images
         public int imagetick = 0;
@@ -98,6 +99,7 @@ namespace The_Deep_One
             Screen.Y = 0;
             spriteBatch = new SpriteBatch(GraphicsDevice);
             buttons = new Buttons(this, graphics, spriteBatch, Content, souls);
+            news = new News(this, graphics, spriteBatch, Content, souls, buttons);
 
             base.Initialize();
         }
@@ -110,20 +112,21 @@ namespace The_Deep_One
 
             buttons.LoadButtonContent();
 
-            #region NEWS
-            news1 = Content.Load<Texture2D>("News1");
-            news2 = Content.Load<Texture2D>("News2");
-            news3 = Content.Load<Texture2D>("News3");
-            news4 = Content.Load<Texture2D>("News4");
-            news5 = Content.Load<Texture2D>("News5");
-            news6 = Content.Load<Texture2D>("News6");
-            news7 = Content.Load<Texture2D>("News7");
-            news8 = Content.Load<Texture2D>("News8");
-            newspos.X = 15;
-            newspos.Y = 55;
-            newspos.Width = 368;
-            newspos.Height = 551;
-            #endregion
+            news.LoadNewsContent();
+            //#region NEWS
+            //news1 = Content.Load<Texture2D>("News1");
+            //news2 = Content.Load<Texture2D>("News2");
+            //news3 = Content.Load<Texture2D>("News3");
+            //news4 = Content.Load<Texture2D>("News4");
+            //news5 = Content.Load<Texture2D>("News5");
+            //news6 = Content.Load<Texture2D>("News6");
+            //news7 = Content.Load<Texture2D>("News7");
+            //news8 = Content.Load<Texture2D>("News8");
+            //newspos.X = 15;
+            //newspos.Y = 55;
+            //newspos.Width = 368;
+            //newspos.Height = 551;
+            //#endregion
 
             #region IMAGES LOAD
             image1 = Content.Load<Texture2D>("1");
@@ -319,73 +322,75 @@ namespace The_Deep_One
             }
 
             buttons.Update(gameTime);
+
+            news.Update(gameTime);
             
-            #region NEWS
-            switch (souls.souls)
-            {
-                case 1:
-                    newstick = 1;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 200 && newstick == 1)
-            {
-                case true:
-                    newstick = 2;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 1000 && newstick == 2)
-            {
-                case true:
-                    newstick = 3;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 10000 && newstick == 3)
-            {
-                case true:
-                    newstick = 4;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 1000000 && newstick == 4)
-            {
-                case true:
-                    newstick = 5;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 10000000 && newstick == 5)
-            {
-                case true:
-                    newstick = 6;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 1000000000 && newstick == 6)
-            {
-                case true:
-                    newstick = 7;
-                    break;
-                default:
-                    break;
-            }
-            switch (souls.souls >= 10000000000 && newstick == 7)
-            {
-                case true:
-                    newstick = 8;
-                    break;
-                default:
-                    break;
-            }
-            #endregion
+            //#region NEWS
+            //switch (souls.souls)
+            //{
+            //    case 1:
+            //        newstick = 1;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 200 && newstick == 1)
+            //{
+            //    case true:
+            //        newstick = 2;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 1000 && newstick == 2)
+            //{
+            //    case true:
+            //        newstick = 3;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 10000 && newstick == 3)
+            //{
+            //    case true:
+            //        newstick = 4;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 1000000 && newstick == 4)
+            //{
+            //    case true:
+            //        newstick = 5;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 10000000 && newstick == 5)
+            //{
+            //    case true:
+            //        newstick = 6;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 1000000000 && newstick == 6)
+            //{
+            //    case true:
+            //        newstick = 7;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //switch (souls.souls >= 10000000000 && newstick == 7)
+            //{
+            //    case true:
+            //        newstick = 8;
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //#endregion
 
             base.Update(gameTime);
         }
@@ -401,40 +406,41 @@ namespace The_Deep_One
             spriteBatch.Draw(logo, new Rectangle(1100, 445, 655, 655), Color.White);
 
 
-            #region NEWS DRAWING
-            switch (newstick)
-            {
-                case 1:
-                    spriteBatch.Draw(news1, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 2:
-                    spriteBatch.Draw(news2, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 3:
-                    spriteBatch.Draw(news3, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 4:
-                    spriteBatch.Draw(news4, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 5:
-                    spriteBatch.Draw(news5, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 6:
-                    spriteBatch.Draw(news6, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 7:
-                    spriteBatch.Draw(news7, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                case 8:
-                    spriteBatch.Draw(news8, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-                    break;
-                default:
-                    break;
-            }
-            #endregion
+            //#region NEWS DRAWING
+            //switch (newstick)
+            //{
+            //    case 1:
+            //        spriteBatch.Draw(news1, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 2:
+            //        spriteBatch.Draw(news2, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 3:
+            //        spriteBatch.Draw(news3, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 4:
+            //        spriteBatch.Draw(news4, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 5:
+            //        spriteBatch.Draw(news5, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 6:
+            //        spriteBatch.Draw(news6, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 7:
+            //        spriteBatch.Draw(news7, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    case 8:
+            //        spriteBatch.Draw(news8, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //#endregion
+            news.Draw(gameTime);
 
             #region IMAGES DRAWING
-            switch (newstick)
+            switch (news.newstick)
             {
                 case 1:
                     spriteBatch.Draw(image1, new Rectangle(image1pos.X, image1pos.Y, image1pos.Width, image1pos.Height), Color.White);

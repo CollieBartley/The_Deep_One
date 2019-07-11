@@ -18,6 +18,7 @@ namespace The_Deep_One
 
         Souls souls;
         DeepOne deepone;
+        News news;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -96,11 +97,11 @@ namespace The_Deep_One
         {
             Content.RootDirectory = "Content";
         }
-        public Buttons(DeepOne deepOne, GraphicsDeviceManager grphcs, SpriteBatch sprtBatch, ContentManager content, Souls p_souls)
+        public Buttons(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls)
         {
-            deepone = deepOne;
-            graphics = grphcs;
-            spriteBatch = sprtBatch;
+            deepone = p_deepone;
+            graphics = p_graphics;
+            spriteBatch = p_spriteBatch;
             Content = content;
             souls = p_souls;
         }
@@ -678,7 +679,7 @@ namespace The_Deep_One
             {
                 case true:
                     completetick = 0;
-                    deepone.newstick = 0;
+                    news.newstick = 0;
                     deepone.endstate = 0;
                     souls.souls = 0;
                     deepone.upgrade1 = 0;
@@ -731,8 +732,6 @@ namespace The_Deep_One
         {
             graphics.GraphicsDevice.Clear(Color.Black);
             MouseState newState = Mouse.GetState();
-
-            
 
             #region BUTTON DRAWING
             spriteBatch.Draw(button1, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
