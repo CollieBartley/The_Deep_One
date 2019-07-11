@@ -14,6 +14,7 @@ namespace The_Deep_One
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public Song backgroundMusic;
 
         int millisecondsPerFrame = 1000; //Update every 1 second
         int timeSinceLastUpdate = 0; //Accumulate the elapsed time
@@ -81,6 +82,9 @@ namespace The_Deep_One
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
+            backgroundMusic = Content.Load<Song>("Ambient Wave");
+            //MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(backgroundMusic);
         }
 
         protected override void UnloadContent()

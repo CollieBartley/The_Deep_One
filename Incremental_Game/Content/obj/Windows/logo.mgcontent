@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/logo.PNG</SourceFile>
-  <SourceTime>2019-07-08T12:31:56.6837462+10:00</SourceTime>
-  <DestFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/logo.xnb</DestFile>
-  <DestTime>2019-07-10T08:26:17.6676565+10:00</DestTime>
+  <SourceFile>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/logo.PNG</SourceFile>
+  <SourceTime>2019-07-09T14:29:11.9655448+10:00</SourceTime>
+  <DestFile>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/bin/Windows/logo.xnb</DestFile>
+  <DestTime>2019-07-11T11:56:00.5037779+10:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T02:05:36+11:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

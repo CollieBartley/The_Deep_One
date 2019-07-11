@@ -83,3 +83,60 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Co
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\6.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\7.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\8.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\button.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\buttonPressed.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\font.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\fontlarge.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\logo.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\rect.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\temp.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\1.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\2.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\3.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\4.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\5.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\6.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\7.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\8.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\button.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\buttonPressed.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\font.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\fontlarge.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\logo.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News1.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News2.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News3.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News4.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News5.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News6.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News7.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News8.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\rect.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\temp.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Incremental_Game.exe
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Incremental_Game.pdb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\MonoGame.Framework.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.MediaFoundation.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.XAudio2.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.DXGI.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.Direct3D11.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.Direct2D1.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.XInput.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.Direct3D9.dll
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\MonoGame.Framework.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.MediaFoundation.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.XAudio2.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.DXGI.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.Direct3D11.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.Direct2D1.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.XInput.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.Direct3D9.xml
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csprojAssemblyReference.cache
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CoreCompileInputs.cache
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CopyComplete
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.exe
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.pdb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Ambient Wave.wma
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Ambient Wave.xnb

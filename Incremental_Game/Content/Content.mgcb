@@ -279,3 +279,9 @@
 /processorParam:TextureFormat=Color
 /build:7.jpg
 
+#begin Ambient Wave.ogg
+/importer:OggImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Ambient Wave.ogg
+
