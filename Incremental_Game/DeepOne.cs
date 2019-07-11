@@ -28,7 +28,6 @@ namespace The_Deep_One
         public int MouseX, MouseY;
         public int debug = 0;
 
-
         Souls souls = new Souls();
         Buttons buttons;
         News news;
@@ -36,6 +35,8 @@ namespace The_Deep_One
         Upgrades upgrades;
 
         public int endstate = 0;
+
+        public List<SoundEffect> soundEffects;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -49,6 +50,8 @@ namespace The_Deep_One
 
             graphics.PreferredBackBufferWidth = 1600; // Window Width
             graphics.PreferredBackBufferHeight = 900;// Window Height
+
+            soundEffects = new List<SoundEffect>();
 
             this.IsMouseVisible = true;
         }
@@ -82,9 +85,14 @@ namespace The_Deep_One
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
-            backgroundMusic = Content.Load<Song>("Ambient Wave");
-            //MediaPlayer.IsRepeating = true;
+            backgroundMusic = Content.Load<Song>("background");
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Volume -= 0.6f;
             MediaPlayer.Play(backgroundMusic);
+
+            soundEffects.Add(Content.Load<SoundEffect>("news"));
+            soundEffects.Add(Content.Load<SoundEffect>("click"));
+            SoundEffect.MasterVolume = 0.4f;
         }
 
         protected override void UnloadContent()

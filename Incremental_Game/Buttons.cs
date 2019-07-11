@@ -228,6 +228,7 @@ namespace The_Deep_One
                 case true:
                     souls.souls++;
                     souls.soulsadd = true;
+                    deepone.soundEffects[1].CreateInstance().Play();
                     break;
                 default:
                     break;

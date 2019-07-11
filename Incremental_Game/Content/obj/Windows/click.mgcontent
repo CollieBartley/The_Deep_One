@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/click.wav</SourceFile>
+  <SourceTime>2019-07-11T14:13:24.73514+10:00</SourceTime>
+  <DestFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/click.xnb</DestFile>
+  <DestTime>2019-07-11T14:13:45.6074345+10:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2017-03-02T02:05:36+11:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2017-03-02T02:05:36+11:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

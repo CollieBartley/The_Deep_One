@@ -138,6 +138,14 @@ namespace The_Deep_One
                     break;
             }
             #endregion
+
+            switch (newstick)
+            {
+                case 1:
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void Draw(GameTime gameTime)

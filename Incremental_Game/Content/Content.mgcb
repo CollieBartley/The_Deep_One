@@ -279,9 +279,21 @@
 /processorParam:TextureFormat=Color
 /build:7.jpg
 
-#begin Ambient Wave.ogg
-/importer:OggImporter
+#begin background.mp3
+/importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:Ambient Wave.ogg
+/build:background.mp3
+
+#begin news.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:news.wav
+
+#begin click.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:click.wav
 
