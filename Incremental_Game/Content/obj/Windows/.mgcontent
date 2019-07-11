@@ -4,31 +4,31 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/button.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/buttonPressed.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/font.spritefont</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/fontlarge.spritefont</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/logo.PNG</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News1.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News2.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News3.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News4.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News5.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News6.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News7.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/News8.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/rect.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/temp.png</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/1.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/2.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/3.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/4.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/5.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/6.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/8.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/7.jpg</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/background.mp3</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/news.wav</File>
-    <File>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/click.wav</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/button.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/buttonPressed.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/font.spritefont</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/fontlarge.spritefont</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/logo.PNG</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News1.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News2.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News3.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News4.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News5.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News6.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News7.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/News8.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/rect.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/temp.png</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/1.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/2.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/3.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/4.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/5.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/6.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/8.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/7.jpg</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/background.mp3</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/news.wav</File>
+    <File>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/click.wav</File>
   </SourceFiles>
 </SourceFileCollection>

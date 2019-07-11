@@ -139,13 +139,7 @@ namespace The_Deep_One
             }
             #endregion
 
-            switch (newstick)
-            {
-                case 1:
-                    break;
-                default:
-                    break;
-            }
+         
         }
 
         public void Draw(GameTime gameTime)
@@ -157,6 +151,7 @@ namespace The_Deep_One
             {
                 case 1:
                     spriteBatch.Draw(news1, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
+                    deepone.soundEffects[0].Play();
                     break;
                 case 2:
                     spriteBatch.Draw(news2, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);

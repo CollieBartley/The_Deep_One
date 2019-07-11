@@ -138,9 +138,11 @@ C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debu
 C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CopyComplete
 C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.exe
 C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.pdb
-C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Ambient Wave.wma
-C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Ambient Wave.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\background.wma
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\background.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\news.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\click.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\background.wma
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\background.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\click.xnb
+C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\news.xnb

@@ -90,8 +90,9 @@ namespace The_Deep_One
             MediaPlayer.Volume -= 0.6f;
             MediaPlayer.Play(backgroundMusic);
 
-            soundEffects.Add(Content.Load<SoundEffect>("news"));
             soundEffects.Add(Content.Load<SoundEffect>("click"));
+            soundEffects.Add(Content.Load<SoundEffect>("news"));
+            
             SoundEffect.MasterVolume = 0.4f;
         }
 

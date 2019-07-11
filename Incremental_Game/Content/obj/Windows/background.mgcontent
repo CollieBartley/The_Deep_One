@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/background.mp3</SourceFile>
-  <SourceTime>2019-07-11T13:36:52.078999+10:00</SourceTime>
-  <DestFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/background.xnb</DestFile>
-  <DestTime>2019-07-11T13:40:05.0176649+10:00</DestTime>
+  <SourceFile>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/background.mp3</SourceFile>
+  <SourceTime>2019-07-11T14:24:11.2368803+10:00</SourceTime>
+  <DestFile>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/bin/Windows/background.xnb</DestFile>
+  <DestTime>2019-07-11T14:28:44.523945+10:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2017-03-02T02:05:36+11:00</ImporterTime>
   <Processor>SongProcessor</Processor>
@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/background.wma</string>
+    <string>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/bin/Windows/background.wma</string>
   </BuildOutput>
 </PipelineBuildEvent>

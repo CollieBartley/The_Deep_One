@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/font.spritefont</SourceFile>
-  <SourceTime>2019-07-09T12:22:45.0593421+10:00</SourceTime>
-  <DestFile>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/font.xnb</DestFile>
-  <DestTime>2019-07-11T12:15:33.7595215+10:00</DestTime>
+  <SourceFile>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/font.spritefont</SourceFile>
+  <SourceTime>2019-07-09T14:29:11.9565734+10:00</SourceTime>
+  <DestFile>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/bin/Windows/font.xnb</DestFile>
+  <DestTime>2019-07-11T14:28:40.5401971+10:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2017-03-02T02:05:36+11:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>
