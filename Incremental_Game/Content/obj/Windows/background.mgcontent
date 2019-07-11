@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>D:/AIE/Programing Cert2/Week6/Incremental_Game/Incremental_Game/Content/bin/Windows/background.wma</string>
+    <string>C:/Users/s182217/Documents/GitHub/Incremental_Game/Incremental_Game/Content/bin/Windows/background.wma</string>
   </BuildOutput>
 </PipelineBuildEvent>

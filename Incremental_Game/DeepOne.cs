@@ -48,14 +48,14 @@ namespace The_Deep_One
         public DeepOne()
         {
             graphics = new GraphicsDeviceManager(this);
-            
+
             Content.RootDirectory = "Content";
 
             graphics.PreferredBackBufferWidth = 1600; // Window Width
             graphics.PreferredBackBufferHeight = 900;// Window Height
 
             soundEffects = new List<SoundEffect>();
-   
+
 
             this.IsMouseVisible = true;
         }
