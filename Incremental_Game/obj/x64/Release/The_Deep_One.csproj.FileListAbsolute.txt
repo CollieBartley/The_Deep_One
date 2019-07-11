@@ -57,3 +57,53 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Release\The Deep One.pdb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Release\The Deep One.exe
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Release\The Deep One.pdb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\1.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\2.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\3.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\4.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\5.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\6.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\7.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\8.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\background.wma
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\background.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\button.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\buttonPressed.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\click.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\font.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\fontlarge.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\logo.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\news.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News1.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News2.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News3.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News4.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News5.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News6.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News7.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\News8.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\rect.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\Content\temp.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\The Deep One.exe
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\The Deep One.pdb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\MonoGame.Framework.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.MediaFoundation.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.XAudio2.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.DXGI.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.Direct3D11.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.Direct2D1.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.XInput.dll
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\MonoGame.Framework.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.MediaFoundation.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.XAudio2.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.DXGI.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.Direct3D11.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.Direct2D1.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Release\SharpDX.XInput.xml
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Release\The_Deep_One.csprojAssemblyReference.cache
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Release\The_Deep_One.csproj.CoreCompileInputs.cache
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Release\The_Deep_One.csproj.CopyComplete
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Release\The Deep One.exe
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Release\The Deep One.pdb

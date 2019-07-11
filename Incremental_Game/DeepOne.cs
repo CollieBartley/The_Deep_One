@@ -56,7 +56,6 @@ namespace The_Deep_One
 
             soundEffects = new List<SoundEffect>();
 
-
             this.IsMouseVisible = true;
         }
 
@@ -89,6 +88,8 @@ namespace The_Deep_One
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
+
+            // Music & Sound Effects
             backgroundMusic = Content.Load<Song>("background");
             MediaPlayer.IsRepeating = true;
             MediaPlayer.Volume -= 0.6f;

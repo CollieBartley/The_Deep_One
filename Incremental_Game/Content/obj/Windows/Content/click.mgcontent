@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/click.wav</SourceFile>
+  <SourceTime>2019-07-11T20:36:59.6258357+10:00</SourceTime>
+  <DestFile>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/bin/Windows/Content/click.xnb</DestFile>
+  <DestTime>2019-07-11T21:00:21.7277947+10:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2018-12-09T03:35:54+11:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-09T03:35:54+11:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -5,8 +5,6 @@ C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Cont
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\logo.xnb
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\rect.xnb
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\temp.xnb
-C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Incremental_Game.exe
-C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Incremental_Game.pdb
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\MonoGame.Framework.dll
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\SharpDX.MediaFoundation.dll
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\SharpDX.dll
@@ -26,8 +24,6 @@ C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Shar
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The_Deep_One.csprojAssemblyReference.cache
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CoreCompileInputs.cache
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CopyComplete
-C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\Incremental_Game.exe
-C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\Incremental_Game.pdb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\button.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\buttonPressed.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\font.xnb
@@ -146,3 +142,27 @@ C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debu
 C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\background.xnb
 C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\click.xnb
 C:\Users\s182217\Documents\GitHub\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\news.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\1.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\2.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\3.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\4.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\5.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\6.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\7.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\8.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\background.wma
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\background.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\click.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\news.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News1.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News2.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News3.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News4.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News5.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News6.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News7.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\Content\News8.xnb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\The Deep One.exe
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\The Deep One.pdb
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The Deep One.exe
+C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The Deep One.pdb
