@@ -32,16 +32,7 @@ namespace The_Deep_One
         Buttons buttons;
         News news;
         Images images;
-
-        // Upgrades
-        public int upgrade1 = 0;
-        public int upgrade2 = 0;
-        public int upgrade3 = 0;
-        public int upgrade4 = 0;
-        public int upgrade5 = 0;
-        public int upgrade6 = 0;
-        public int upgrade7 = 0;
-        public int upgrade8 = 0;
+        Upgrades upgrades;
 
         public int endstate = 0;
 
@@ -68,7 +59,8 @@ namespace The_Deep_One
             Screen.X = 0;
             Screen.Y = 0;
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            buttons = new Buttons(this, graphics, spriteBatch, Content, souls);
+            upgrades = new Upgrades(this, graphics, spriteBatch, Content, souls, buttons, news, images);
+            buttons = new Buttons(this, graphics, spriteBatch, Content, souls, upgrades);
             news = new News(this, graphics, spriteBatch, Content, souls, buttons);
             images = new Images(this, graphics, spriteBatch, Content, souls, buttons, news);
 
@@ -104,85 +96,13 @@ namespace The_Deep_One
             {
                 case true:
                     timeSinceLastUpdate = 0;
-                    #region UPGRADES
-                    switch (upgrade1 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade1 *2);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade2 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade2 * 10);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade3 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade3 * 50);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade4 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade4 * 100);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade5 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade5 * 1000);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade6 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade6 * 10000);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade7 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade7 * 100000);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    switch (upgrade8 > 0)
-                    {
-                        case true:
-                            souls.souls += (upgrade8 * 1000000);
-                            break;
-                        default:
-                            break;
-                    }
-                        #endregion
+                    upgrades.Update(gameTime);
                     break;
                 default:
                     break;
             }
 
-            #region LOOPS
+            // LOOPS
             switch (souls.souls < 0)
             {
                 case true:
@@ -218,7 +138,6 @@ namespace The_Deep_One
                 default:
                     break;
             }
-            #endregion
 
             //Mouse position state
             MouseY = Mouse.GetState().Y;
@@ -262,7 +181,6 @@ namespace The_Deep_One
 
             spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
 
-            #region END
             switch (souls.souls >= 10000000000)
             {
                 case true:
@@ -295,7 +213,6 @@ namespace The_Deep_One
                 default:
                     break;
             }
-            #endregion
 
             spriteBatch.End();
 

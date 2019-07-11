@@ -19,6 +19,7 @@ namespace The_Deep_One
         Souls souls;
         DeepOne deepone;
         News news;
+        Upgrades upgrades;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -97,13 +98,14 @@ namespace The_Deep_One
         {
             Content.RootDirectory = "Content";
         }
-        public Buttons(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls)
+        public Buttons(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls, Upgrades p_upgrades)
         {
             deepone = p_deepone;
             graphics = p_graphics;
             spriteBatch = p_spriteBatch;
             Content = content;
             souls = p_souls;
+            upgrades = p_upgrades;
         }
 
         public void LoadButtonContent()
@@ -268,7 +270,7 @@ namespace The_Deep_One
             switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50)
             {
                 case true:
-                    deepone.upgrade1++;
+                    upgrades.upgrade1++;
                     souls.souls -= 50;
                     souls.soulsadd = true;
                     break;
@@ -313,7 +315,7 @@ namespace The_Deep_One
             switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250)
             {
                 case true:
-                    deepone.upgrade2++;
+                    upgrades.upgrade2++;
                     souls.souls -= 250;
                     souls.soulsadd = true;
                     break;
@@ -358,7 +360,7 @@ namespace The_Deep_One
             switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500)
             {
                 case true:
-                    deepone.upgrade3++;
+                    upgrades.upgrade3++;
                     souls.souls -= 1000;
                     souls.soulsadd = true;
                     break;
@@ -403,7 +405,7 @@ namespace The_Deep_One
             switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000)
             {
                 case true:
-                    deepone.upgrade4++;
+                    upgrades.upgrade4++;
                     souls.souls -= 10000;
                     souls.soulsadd = true;
                     break;
@@ -448,7 +450,7 @@ namespace The_Deep_One
             switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000)
             {
                 case true:
-                    deepone.upgrade5++;
+                    upgrades.upgrade5++;
                     souls.souls -= 100000;
                     souls.soulsadd = true;
                     break;
@@ -493,7 +495,7 @@ namespace The_Deep_One
             switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000)
             {
                 case true:
-                    deepone.upgrade6++;
+                    upgrades.upgrade6++;
                     souls.souls -= 1000000;
                     souls.soulsadd = true;
                     break;
@@ -538,7 +540,7 @@ namespace The_Deep_One
             switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000)
             {
                 case true:
-                    deepone.upgrade7++;
+                    upgrades.upgrade7++;
                     souls.souls -= 10000000;
                     souls.soulsadd = true;
                     break;
@@ -583,7 +585,7 @@ namespace The_Deep_One
             switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000)
             {
                 case true:
-                    deepone.upgrade8++;
+                    upgrades.upgrade8++;
                     souls.souls -= 100000000;
                     souls.soulsadd = true;
                     break;
@@ -682,14 +684,14 @@ namespace The_Deep_One
                     news.newstick = 0;
                     deepone.endstate = 0;
                     souls.souls = 0;
-                    deepone.upgrade1 = 0;
-                    deepone.upgrade2 = 0;
-                    deepone.upgrade3 = 0;
-                    deepone.upgrade4 = 0;
-                    deepone.upgrade5 = 0;
-                    deepone.upgrade6 = 0;
-                    deepone.upgrade7 = 0;
-                    deepone.upgrade8 = 0;
+                    upgrades.upgrade1 = 0;
+                    upgrades.upgrade2 = 0;
+                    upgrades.upgrade3 = 0;
+                    upgrades.upgrade4 = 0;
+                    upgrades.upgrade5 = 0;
+                    upgrades.upgrade6 = 0;
+                    upgrades.upgrade7 = 0;
+                    upgrades.upgrade8 = 0;
                     button1Pressedtick = 0;
                     button1Releasedtick = 0;
                     button2Pressedtick = 0;
@@ -838,15 +840,17 @@ namespace The_Deep_One
 
             #endregion
 
+            upgrades.Draw(gameTime);
+
             #region BUTTON QUANTITY TEXT
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade1, new Vector2(button2pos.X - 120, button2pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade2, new Vector2(button3pos.X - 120, button3pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade3, new Vector2(button4pos.X - 120, button4pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade4, new Vector2(button5pos.X - 120, button5pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade5, new Vector2(button6pos.X - 120, button6pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade6, new Vector2(button7pos.X - 120, button7pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade7, new Vector2(button8pos.X - 120, button8pos.Y + 13), Color.White);
-            spriteBatch.DrawString(fontlarge, "QTY: " + deepone.upgrade8, new Vector2(button9pos.X - 120, button9pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade1, new Vector2(button2pos.X - 120, button2pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade2, new Vector2(button3pos.X - 120, button3pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade3, new Vector2(button4pos.X - 120, button4pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade4, new Vector2(button5pos.X - 120, button5pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade5, new Vector2(button6pos.X - 120, button6pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade6, new Vector2(button7pos.X - 120, button7pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade7, new Vector2(button8pos.X - 120, button8pos.Y + 13), Color.White);
+            spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade8, new Vector2(button9pos.X - 120, button9pos.Y + 13), Color.White);
             #endregion
 
             #region BUTTON TEXT
