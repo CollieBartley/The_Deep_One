@@ -31,6 +31,7 @@ namespace The_Deep_One
         Souls souls = new Souls();
         Buttons buttons;
         News news;
+        Images images;
 
         // Upgrades
         public int upgrade1 = 0;
@@ -41,37 +42,6 @@ namespace The_Deep_One
         public int upgrade6 = 0;
         public int upgrade7 = 0;
         public int upgrade8 = 0;
-
-        // News
-        //public int newstick = 0;
-        //public Rectangle newspos;
-        //public Texture2D news1;
-        //public Texture2D news2;
-        //public Texture2D news3;
-        //public Texture2D news4;
-        //public Texture2D news5;
-        //public Texture2D news6;
-        //public Texture2D news7;
-        //public Texture2D news8;
-
-        // Images
-        public int imagetick = 0;
-        public Texture2D image1;
-        public Rectangle image1pos;
-        public Texture2D image2;
-        public Rectangle image2pos;
-        public Texture2D image3;
-        public Rectangle image3pos;
-        public Texture2D image4;
-        public Rectangle image4pos;
-        public Texture2D image5;
-        public Rectangle image5pos;
-        public Texture2D image6;
-        public Rectangle image6pos;
-        public Texture2D image7;
-        public Rectangle image7pos;
-        public Texture2D image8;
-        public Rectangle image8pos;
 
         public int endstate = 0;
 
@@ -100,6 +70,7 @@ namespace The_Deep_One
             spriteBatch = new SpriteBatch(GraphicsDevice);
             buttons = new Buttons(this, graphics, spriteBatch, Content, souls);
             news = new News(this, graphics, spriteBatch, Content, souls, buttons);
+            images = new Images(this, graphics, spriteBatch, Content, souls, buttons, news);
 
             base.Initialize();
         }
@@ -113,63 +84,8 @@ namespace The_Deep_One
             buttons.LoadButtonContent();
 
             news.LoadNewsContent();
-            //#region NEWS
-            //news1 = Content.Load<Texture2D>("News1");
-            //news2 = Content.Load<Texture2D>("News2");
-            //news3 = Content.Load<Texture2D>("News3");
-            //news4 = Content.Load<Texture2D>("News4");
-            //news5 = Content.Load<Texture2D>("News5");
-            //news6 = Content.Load<Texture2D>("News6");
-            //news7 = Content.Load<Texture2D>("News7");
-            //news8 = Content.Load<Texture2D>("News8");
-            //newspos.X = 15;
-            //newspos.Y = 55;
-            //newspos.Width = 368;
-            //newspos.Height = 551;
-            //#endregion
 
-            #region IMAGES LOAD
-            image1 = Content.Load<Texture2D>("1");
-            image1pos.X = 340;
-            image1pos.Y = 130;
-            image1pos.Width = 850;
-            image1pos.Height = 601;
-            image2 = Content.Load<Texture2D>("2");
-            image2pos.X = 352;
-            image2pos.Y = 140;
-            image2pos.Width = 832;
-            image2pos.Height = 514;
-            image3 = Content.Load<Texture2D>("3");
-            image3pos.X = 340;
-            image3pos.Y = 140;
-            image3pos.Width = 855;
-            image3pos.Height = 486;
-            image4 = Content.Load<Texture2D>("4");
-            image4pos.X = 320;
-            image4pos.Y = 140;
-            image4pos.Width = 855;
-            image4pos.Height = 486;
-            image5 = Content.Load<Texture2D>("5");
-            image5pos.X = 320;
-            image5pos.Y = 140;
-            image5pos.Width = 855;
-            image5pos.Height = 486;
-            image6 = Content.Load<Texture2D>("6");
-            image6pos.X = 320;
-            image6pos.Y = 140;
-            image6pos.Width = 855;
-            image6pos.Height = 486;
-            image7 = Content.Load<Texture2D>("7");
-            image7pos.X = 420;
-            image7pos.Y = 10;
-            image7pos.Width = 596;
-            image7pos.Height = 850;
-            image8 = Content.Load<Texture2D>("8");
-            image8pos.X = 500;
-            image8pos.Y = 70;
-            image8pos.Width = 601;
-            image8pos.Height = 768;
-            #endregion
+            images.LoadImagesContent();
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
@@ -324,73 +240,6 @@ namespace The_Deep_One
             buttons.Update(gameTime);
 
             news.Update(gameTime);
-            
-            //#region NEWS
-            //switch (souls.souls)
-            //{
-            //    case 1:
-            //        newstick = 1;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 200 && newstick == 1)
-            //{
-            //    case true:
-            //        newstick = 2;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 1000 && newstick == 2)
-            //{
-            //    case true:
-            //        newstick = 3;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 10000 && newstick == 3)
-            //{
-            //    case true:
-            //        newstick = 4;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 1000000 && newstick == 4)
-            //{
-            //    case true:
-            //        newstick = 5;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 10000000 && newstick == 5)
-            //{
-            //    case true:
-            //        newstick = 6;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 1000000000 && newstick == 6)
-            //{
-            //    case true:
-            //        newstick = 7;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //switch (souls.souls >= 10000000000 && newstick == 7)
-            //{
-            //    case true:
-            //        newstick = 8;
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //#endregion
 
             base.Update(gameTime);
         }
@@ -405,71 +254,9 @@ namespace The_Deep_One
             //spriteBatch.Draw(temp, new Rectangle(0, 0, Screen.Width, Screen.Height), Color.White);
             spriteBatch.Draw(logo, new Rectangle(1100, 445, 655, 655), Color.White);
 
-
-            //#region NEWS DRAWING
-            //switch (newstick)
-            //{
-            //    case 1:
-            //        spriteBatch.Draw(news1, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 2:
-            //        spriteBatch.Draw(news2, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 3:
-            //        spriteBatch.Draw(news3, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 4:
-            //        spriteBatch.Draw(news4, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 5:
-            //        spriteBatch.Draw(news5, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 6:
-            //        spriteBatch.Draw(news6, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 7:
-            //        spriteBatch.Draw(news7, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    case 8:
-            //        spriteBatch.Draw(news8, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //#endregion
             news.Draw(gameTime);
 
-            #region IMAGES DRAWING
-            switch (news.newstick)
-            {
-                case 1:
-                    spriteBatch.Draw(image1, new Rectangle(image1pos.X, image1pos.Y, image1pos.Width, image1pos.Height), Color.White);
-                    break;
-                case 2:
-                    spriteBatch.Draw(image2, new Rectangle(image2pos.X, image2pos.Y, image2pos.Width, image2pos.Height), Color.White);
-                    break;
-                case 3:
-                    spriteBatch.Draw(image3, new Rectangle(image3pos.X, image3pos.Y, image3pos.Width, image3pos.Height), Color.White);
-                    break;
-                case 4:
-                    spriteBatch.Draw(image4, new Rectangle(image4pos.X, image4pos.Y, image4pos.Width, image4pos.Height), Color.White);
-                    break;
-                case 5:
-                    spriteBatch.Draw(image5, new Rectangle(image5pos.X, image5pos.Y, image5pos.Width, image5pos.Height), Color.White);
-                    break;
-                case 6:
-                    spriteBatch.Draw(image6, new Rectangle(image6pos.X, image6pos.Y, image6pos.Width, image6pos.Height), Color.White);
-                    break;
-                case 7:
-                    spriteBatch.Draw(image7, new Rectangle(image7pos.X, image7pos.Y, image7pos.Width, image7pos.Height), Color.White);
-                    break;
-                case 8:
-                    spriteBatch.Draw(image8, new Rectangle(image8pos.X, image8pos.Y, image8pos.Width, image8pos.Height), Color.White);
-                    break;
-                default:
-                    break;
-            }
-            #endregion
+            images.Draw(gameTime);
 
             buttons.Draw(gameTime);
 

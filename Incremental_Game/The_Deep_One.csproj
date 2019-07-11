@@ -78,6 +78,7 @@
   <ItemGroup>
     <Compile Include="Buttons.cs" />
     <Compile Include="DeepOne.cs" />
+    <Compile Include="Images.cs" />
     <Compile Include="News.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
