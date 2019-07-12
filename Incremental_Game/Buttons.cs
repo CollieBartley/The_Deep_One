@@ -18,7 +18,6 @@ namespace The_Deep_One
 
         Souls souls;
         DeepOne deepone;
-        News news;
         Upgrades upgrades;
 
         private SpriteFont font;
@@ -92,6 +91,26 @@ namespace The_Deep_One
         public Rectangle button11pos;
         public int button11Pressedtick = 0;
         public int button11Releasedtick = 0;
+        #endregion
+
+        #region 1X 5X 10X 50X BUTTON POS & TICK
+        public int buttonxtick = 0;
+
+        public Texture2D button1x;
+        public Texture2D button1xPressed;
+        public Rectangle button1xpos;
+
+        public Texture2D button5x;
+        public Texture2D button5xPressed;
+        public Rectangle button5xpos;
+
+        public Texture2D button10x;
+        public Texture2D button10xPressed;
+        public Rectangle button10xpos;
+
+        public Texture2D button50x;
+        public Texture2D button50xPressed;
+        public Rectangle button50xpos;
         #endregion
 
         public Buttons()
@@ -184,21 +203,50 @@ namespace The_Deep_One
             button11 = Content.Load<Texture2D>("button");
             button11Pressed = Content.Load<Texture2D>("buttonPressed");
             button11pos.X = 675;
-            button11pos.Y = 500;
+            button11pos.Y = 700;
             button11pos.Width = 250;
             button11pos.Height = 54;
+            #endregion
+
+            #region 1X 5X 10X 50X LOAD
+            button1x = Content.Load<Texture2D>("button");
+            button1xPressed = Content.Load<Texture2D>("buttonPressed");
+            button1xpos.X = 1318;
+            button1xpos.Y = 5;
+            button1xpos.Width = 45;
+            button1xpos.Height = 45;
+
+            button5x = Content.Load<Texture2D>("button");
+            button5xPressed = Content.Load<Texture2D>("buttonPressed");
+            button5xpos.X = 1385;
+            button5xpos.Y = 5;
+            button5xpos.Width = 45;
+            button5xpos.Height = 45;
+
+            button10x = Content.Load<Texture2D>("button");
+            button10xPressed = Content.Load<Texture2D>("buttonPressed");
+            button10xpos.X = 1455;
+            button10xpos.Y = 5;
+            button10xpos.Width = 45;
+            button10xpos.Height = 45;
+
+            button50x = Content.Load<Texture2D>("button");
+            button50xPressed = Content.Load<Texture2D>("buttonPressed");
+            button50xpos.X = 1521;
+            button50xpos.Y = 5;
+            button50xpos.Width = 45;
+            button50xpos.Height = 45;
             #endregion
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, News news)
         {
             MouseState newState = Mouse.GetState();
 
-            #region BUTTON UPDATES
-            // Button 1 - Clicker
+            #region Button 1 - Clicker
             switch (deepone.MouseDest.Intersects(button1pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -242,8 +290,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 2 - Upgrade 1
+            #region Button 2 - Upgrade 1
             switch (deepone.MouseDest.Intersects(button2pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -268,11 +317,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50)
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade1++;
                     souls.souls -= 50;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade1 += 5;
+                    souls.souls -= 250;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade1 += 10;
+                    souls.souls -= 500;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1250 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade1 += 50;
+                    souls.souls -= 1250;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -288,8 +373,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 3 - Upgrade 2
+            #region Button 3 - Upgrade 2
             switch (deepone.MouseDest.Intersects(button3pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -314,11 +400,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250)
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade2++;
                     souls.souls -= 250;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1250 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade2 += 5;
+                    souls.souls -= 1250;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 2500 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade2 += 10;
+                    souls.souls -= 2500;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 12500 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade2 += 50;
+                    souls.souls -= 12500;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -334,8 +456,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 4 - Upgrade 3
+            #region Button 4 - Upgrade 3
             switch (deepone.MouseDest.Intersects(button4pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -360,11 +483,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500)
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade3++;
                     souls.souls -= 1000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 2500 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade3 += 5;
+                    souls.souls -= 2500;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 5000 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade3 += 10;
+                    souls.souls -= 5000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 25000 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade3 += 50;
+                    souls.souls -= 25000;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -380,8 +539,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 5 - Upgrade 4
+            #region Button 5 - Upgrade 4
             switch (deepone.MouseDest.Intersects(button5pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -406,11 +566,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000)
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade4++;
                     souls.souls -= 10000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50000 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade4 += 5;
+                    souls.souls -= 50000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade4 += 10;
+                    souls.souls -= 100000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500000 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade4 += 50;
+                    souls.souls -= 500000;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -426,8 +622,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 6 - Upgrade 5
+            #region Button 6 - Upgrade 5
             switch (deepone.MouseDest.Intersects(button6pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -452,11 +649,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000)
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade5++;
                     souls.souls -= 100000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500000 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade5 += 5;
+                    souls.souls -= 500000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade5 += 10;
+                    souls.souls -= 1000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 5000000 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade5 += 50;
+                    souls.souls -= 5000000;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -472,8 +705,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 7 - Upgrade 6
+            #region Button 7 - Upgrade 6
             switch (deepone.MouseDest.Intersects(button7pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -498,11 +732,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000)
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade6++;
                     souls.souls -= 1000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 5000000 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade6 += 5;
+                    souls.souls -= 5000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade6 += 10;
+                    souls.souls -= 10000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50000000 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade6 += 50;
+                    souls.souls -= 50000000;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -518,8 +788,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 8 - Upgrade 7
+            #region Button 8 - Upgrade 7
             switch (deepone.MouseDest.Intersects(button8pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -544,11 +815,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000)
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade7++;
                     souls.souls -= 10000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50000000 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade7 += 5;
+                    souls.souls -= 50000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade7 += 10;
+                    souls.souls -= 100000000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500000000 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade7 += 50;
+                    souls.souls -= 500000000;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -564,8 +871,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 9 - Upgrade 8
+            #region Button 9 - Upgrade 8
             switch (deepone.MouseDest.Intersects(button9pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -590,11 +898,47 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000)
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000 && buttonxtick == 0)
             {
                 case true:
                     upgrades.upgrade8++;
                     souls.souls -= 100000000;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    souls.soulsadd = true;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500000000 && buttonxtick == 1)
+            {
+                case true:
+                    upgrades.upgrade8 += 5;
+                    souls.souls -= 500000000;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    souls.soulsadd = true;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000000 && buttonxtick == 2)
+            {
+                case true:
+                    upgrades.upgrade8 += 10;
+                    souls.souls -= 1000000000;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    souls.soulsadd = true;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 5000000000 && buttonxtick == 3)
+            {
+                case true:
+                    upgrades.upgrade8 += 50;
+                    souls.souls -= 5000000000;
                     deepone.soundEffects[0].CreateInstance().Play();
                     souls.soulsadd = true;
                     break;
@@ -610,8 +954,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            //Button 10 - Complete Button
+            #region Button 10 - Complete Button
             switch (completetick >= 1)
             {
                 case true:
@@ -661,8 +1006,9 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
-            // Button 11 - Reset Button
+            #region Button 11 - Reset Button
             switch (deepone.MouseDest.Intersects(button11pos) && (newState.LeftButton == ButtonState.Pressed))
             {
                 case true:
@@ -725,6 +1071,7 @@ namespace The_Deep_One
                     button11Pressedtick = 0;
                     button11Releasedtick = 0;
                     deepone.soundEffects[0].CreateInstance().Play();
+                    SoundEffect.MasterVolume = 0.2f;
                     break;
                 default:
                     break;
@@ -734,6 +1081,44 @@ namespace The_Deep_One
             {
                 case true:
                     souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region 1X 5X 10X 50X BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(button1xpos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonxtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(button5xpos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonxtick = 1;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(button10xpos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonxtick = 2;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(button50xpos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonxtick = 3;
                     break;
                 default:
                     break;
@@ -847,8 +1232,31 @@ namespace The_Deep_One
                 default:
                     break;
             }
+            #endregion
 
+            #region 1X 5X 10X 50X BUTTON DRAWING
+            spriteBatch.Draw(button1x, new Rectangle(button1xpos.X, button1xpos.Y, button1xpos.Width, button1xpos.Height), Color.White);
+            spriteBatch.Draw(button5x, new Rectangle(button5xpos.X, button5xpos.Y, button5xpos.Width, button5xpos.Height), Color.White);
+            spriteBatch.Draw(button10x, new Rectangle(button10xpos.X, button10xpos.Y, button10xpos.Width, button10xpos.Height), Color.White);
+            spriteBatch.Draw(button50x, new Rectangle(button50xpos.X, button50xpos.Y, button50xpos.Width, button50xpos.Height), Color.White);
 
+            switch (buttonxtick)
+            {
+                case 0:
+                    spriteBatch.Draw(button1xPressed, new Rectangle(button1xpos.X, button1xpos.Y, button1xpos.Width, button1xpos.Height), Color.White);
+                    break;
+                case 1:
+                    spriteBatch.Draw(button5xPressed, new Rectangle(button5xpos.X, button5xpos.Y, button5xpos.Width, button5xpos.Height), Color.White);
+                    break;
+                case 2:
+                    spriteBatch.Draw(button10xPressed, new Rectangle(button10xpos.X, button10xpos.Y, button10xpos.Width, button10xpos.Height), Color.White);
+                    break;
+                case 3:
+                    spriteBatch.Draw(button50xPressed, new Rectangle(button50xpos.X, button50xpos.Y, button50xpos.Width, button50xpos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
             #endregion
 
             upgrades.Draw(gameTime);
@@ -875,7 +1283,13 @@ namespace The_Deep_One
             spriteBatch.DrawString(font, "1M - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
             spriteBatch.DrawString(font, "10M - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
             spriteBatch.DrawString(font, "100M - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
+            #endregion
 
+            #region 1X 5X 10X 50X BUTTON TEXT
+            spriteBatch.DrawString(font, "1X", new Vector2(button1xpos.X + 12, button1xpos.Y + 12), Color.White);
+            spriteBatch.DrawString(font, "5X", new Vector2(button5xpos.X + 12, button5xpos.Y + 12), Color.White);
+            spriteBatch.DrawString(font, "10X", new Vector2(button10xpos.X + 10, button10xpos.Y + 12), Color.White);
+            spriteBatch.DrawString(font, "50X", new Vector2(button50xpos.X + 10, button50xpos.Y + 12), Color.White);
             #endregion
         }
     }

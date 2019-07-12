@@ -12,7 +12,7 @@ namespace The_Deep_One
 {
     public class Souls
     {
-        public Int64 souls = 0;
+        public Int64 souls = 9999999999;
         public bool soulsadd = false;
     }
 }

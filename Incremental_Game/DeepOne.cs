@@ -33,13 +33,18 @@ namespace The_Deep_One
         News news;
         Images images;
         Upgrades upgrades;
+        public Texture2D end;
+        public Rectangle endpos;
+
 
         public int endstate = 0;
 
         //public List<SoundEffect> soundEffects;
-        public SoundEffect click, neWs;
-        public SoundEffectInstance clickInst, neWsInst;
+        public SoundEffect roar, neWs;
+        public SoundEffectInstance roarinst, neWsInst;
         public List<SoundEffect> soundEffects;
+
+        public int roartick = 0;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -97,10 +102,19 @@ namespace The_Deep_One
 
             soundEffects.Add(Content.Load<SoundEffect>("click"));
 
+            roar = Content.Load<SoundEffect>("roar");
+            roarinst = roar.CreateInstance();
+
             neWs = Content.Load<SoundEffect>("news");
             neWsInst = neWs.CreateInstance();
 
             SoundEffect.MasterVolume = 0.2f;
+
+            end = Content.Load<Texture2D>("9");
+            endpos.X = 480;
+            endpos.Y = 70;
+            endpos.Width = 640;
+            endpos.Height = 811;
         }
 
         protected override void UnloadContent()
@@ -176,7 +190,7 @@ namespace The_Deep_One
                     break;
             }
 
-            buttons.Update(gameTime);
+            buttons.Update(gameTime, news);
 
             news.Update(gameTime);
 
@@ -214,11 +228,31 @@ namespace The_Deep_One
                     break;
             }
 
+            switch (endstate)
+            {
+                case 1:
+                    spriteBatch.Draw(rect, new Rectangle(0, 0, 1600, 900), Color.Black);
+                    spriteBatch.Draw(end, new Rectangle(endpos.X, endpos.Y, endpos.Width, endpos.Height), Color.White);
+                    break;
+            }
+
             switch (endstate >= 1)
             {
                 case true:
-                    spriteBatch.Draw(rect, new Rectangle(0, 0, 1600, 900), Color.Black);
-                    spriteBatch.DrawString(fontlarge, "The Deep One is pleased", new Vector2(665, 400), Color.White);
+                    spriteBatch.DrawString(fontlarge, "The Deep One is pleased", new Vector2(665, 50), Color.White);
+                    switch (roarinst.State == SoundState.Stopped && roartick == 0)
+                    {
+                        case true:
+                            roarinst.Play();
+                            roartick = 1;
+                            SoundEffect.MasterVolume = 0.9f;
+                            break;
+                        case false:
+                            roartick = 0;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 default:
                     break;

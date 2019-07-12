@@ -46,8 +46,6 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Co
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\News8.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\rect.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\temp.xnb
-D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Incremental_Game.exe
-D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Incremental_Game.pdb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\MonoGame.Framework.dll
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.MediaFoundation.dll
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\SharpDX.dll
@@ -69,8 +67,6 @@ D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Sh
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csprojAssemblyReference.cache
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CoreCompileInputs.cache
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\The_Deep_One.csproj.CopyComplete
-D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.exe
-D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\Incremental_Game.pdb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\1.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\2.xnb
 D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\3.xnb
@@ -166,3 +162,29 @@ C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\The 
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\bin\x64\Debug\The Deep One.pdb
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The Deep One.exe
 C:\Users\c_bar\Documents\GitHub\The_Deep_One\Incremental_Game\obj\x64\Debug\The Deep One.pdb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\1.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\2.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\3.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\4.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\5.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\6.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\7.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\8.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\background.wma
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\background.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\click.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\news.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News1.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News2.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News3.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News4.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News5.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News6.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News7.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\Content\News8.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\The Deep One.exe
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\The Deep One.pdb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\The Deep One.exe
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\obj\x64\Debug\The Deep One.pdb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\roar.xnb
+D:\AIE\Programing Cert2\Week6\Incremental_Game\Incremental_Game\bin\x64\Debug\Content\9.xnb

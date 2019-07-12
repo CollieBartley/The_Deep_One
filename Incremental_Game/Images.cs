@@ -39,6 +39,7 @@ namespace The_Deep_One
         public Texture2D image8;
         public Rectangle image8pos;
 
+
         private SpriteFont font;
         private SpriteFont fontlarge;
         public Rectangle Screen;
@@ -100,6 +101,7 @@ namespace The_Deep_One
             image8pos.Y = 70;
             image8pos.Width = 601;
             image8pos.Height = 768;
+
 
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
