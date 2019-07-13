@@ -112,6 +112,44 @@ namespace The_Deep_One
         public Rectangle button50xpos;
         #endregion
 
+        #region +1 +2 +5 +10 +20 +30 BUTTON POS + TICK
+        public Texture2D buttonplus1;
+        public Texture2D buttonplus1Pressed;
+        public Rectangle buttonplus1pos;
+        public int buttonplus1Pressedtick = 0;
+        public int buttonplus1Releasedtick = 0;
+
+        public Texture2D buttonplus2;
+        public Texture2D buttonplus2Pressed;
+        public Rectangle buttonplus2pos;
+        public int buttonplus2Pressedtick = 0;
+        public int buttonplus2Releasedtick = 0;
+
+        public Texture2D buttonplus5;
+        public Texture2D buttonplus5Pressed;
+        public Rectangle buttonplus5pos;
+        public int buttonplus5Pressedtick = 0;
+        public int buttonplus5Releasedtick = 0;
+
+        public Texture2D buttonplus10;
+        public Texture2D buttonplus10Pressed;
+        public Rectangle buttonplus10pos;
+        public int buttonplus10Pressedtick = 0;
+        public int buttonplus10Releasedtick = 0;
+
+        public Texture2D buttonplus20;
+        public Texture2D buttonplus20Pressed;
+        public Rectangle buttonplus20pos;
+        public int buttonplus20Pressedtick = 0;
+        public int buttonplus20Releasedtick = 0;
+
+        public Texture2D buttonplus30;
+        public Texture2D buttonplus30Pressed;
+        public Rectangle buttonplus30pos;
+        public int buttonplus30Pressedtick = 0;
+        public int buttonplus30Releasedtick = 0;
+        #endregion
+
         public Buttons()
         {
             Content.RootDirectory = "Content";
@@ -236,6 +274,50 @@ namespace The_Deep_One
             button50xpos.Height = 45;
             #endregion
 
+            #region +1 +2 +5 +10 +20 +30 LOAD
+            buttonplus1 = Content.Load<Texture2D>("button");
+            buttonplus1Pressed = Content.Load<Texture2D>("buttonPressed");
+            buttonplus1pos.X = 10;
+            buttonplus1pos.Y = 755;
+            buttonplus1pos.Width = 90;
+            buttonplus1pos.Height = 45;
+
+            buttonplus2 = Content.Load<Texture2D>("button");
+            buttonplus2Pressed = Content.Load<Texture2D>("buttonPressed");
+            buttonplus2pos.X = 105;
+            buttonplus2pos.Y = 755;
+            buttonplus2pos.Width = 90;
+            buttonplus2pos.Height = 45;
+
+            buttonplus5 = Content.Load<Texture2D>("button");
+            buttonplus5Pressed = Content.Load<Texture2D>("buttonPressed");
+            buttonplus5pos.X = 200;
+            buttonplus5pos.Y = 755;
+            buttonplus5pos.Width = 90;
+            buttonplus5pos.Height = 45;
+
+            buttonplus10 = Content.Load<Texture2D>("button");
+            buttonplus10Pressed = Content.Load<Texture2D>("buttonPressed");
+            buttonplus10pos.X = 10;
+            buttonplus10pos.Y = 805;
+            buttonplus10pos.Width = 90;
+            buttonplus10pos.Height = 45;
+
+            buttonplus20 = Content.Load<Texture2D>("button");
+            buttonplus20Pressed = Content.Load<Texture2D>("buttonPressed");
+            buttonplus20pos.X = 105;
+            buttonplus20pos.Y = 805;
+            buttonplus20pos.Width = 90;
+            buttonplus20pos.Height = 45;
+
+            buttonplus30 = Content.Load<Texture2D>("button");
+            buttonplus30Pressed = Content.Load<Texture2D>("buttonPressed");
+            buttonplus30pos.X = 200;
+            buttonplus30pos.Y = 805;
+            buttonplus30pos.Width = 90;
+            buttonplus30pos.Height = 45;
+            #endregion
+
             font = Content.Load<SpriteFont>("font");
             fontlarge = Content.Load<SpriteFont>("fontlarge");
         }
@@ -272,7 +354,7 @@ namespace The_Deep_One
             switch (button1Pressedtick == 1 && souls.soulsadd == false && deepone.endstate == 0)
             {
                 case true:
-                    souls.souls++;
+                    souls.souls += souls.soulsclick;
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -1122,6 +1204,291 @@ namespace The_Deep_One
                     break;
             }
             #endregion
+
+            #region +1 +2 +5 +10 +20 +30 BUTTON UPDATES
+            #region +1 BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(buttonplus1pos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonplus1Pressedtick = 1;
+                    break;
+                case false:
+                    buttonplus1Pressedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(buttonplus1pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                case true:
+                    buttonplus1Releasedtick = 1;
+                    break;
+                case false:
+                    buttonplus1Releasedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus1Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50 && completetick == 0)
+            {
+                case true:
+                    souls.soulsclick += 1;
+                    souls.souls -= 50;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus1Releasedtick == 1 && souls.soulsadd == true)
+            {
+                case true:
+                    souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region +2 BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(buttonplus2pos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonplus2Pressedtick = 1;
+                    break;
+                case false:
+                    buttonplus2Pressedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(buttonplus2pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                case true:
+                    buttonplus2Releasedtick = 1;
+                    break;
+                case false:
+                    buttonplus2Releasedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100 && completetick == 0)
+            {
+                case true:
+                    souls.soulsclick += 5;
+                    souls.souls -= 100;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus2Releasedtick == 1 && souls.soulsadd == true)
+            {
+                case true:
+                    souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region +5 BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(buttonplus5pos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonplus5Pressedtick = 1;
+                    break;
+                case false:
+                    buttonplus5Pressedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(buttonplus5pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                case true:
+                    buttonplus5Releasedtick = 1;
+                    break;
+                case false:
+                    buttonplus5Releasedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250 && completetick == 0)
+            {
+                case true:
+                    souls.soulsclick += 10;
+                    souls.souls -= 250;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus5Releasedtick == 1 && souls.soulsadd == true)
+            {
+                case true:
+                    souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region +10 BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(buttonplus10pos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonplus10Pressedtick = 1;
+                    break;
+                case false:
+                    buttonplus10Pressedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(buttonplus10pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                case true:
+                    buttonplus10Releasedtick = 1;
+                    break;
+                case false:
+                    buttonplus10Releasedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus10Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500 && completetick == 0)
+            {
+                case true:
+                    souls.soulsclick += 10;
+                    souls.souls -= 500;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus10Releasedtick == 1 && souls.soulsadd == true)
+            {
+                case true:
+                    souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region +20 BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(buttonplus20pos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonplus20Pressedtick = 1;
+                    break;
+                case false:
+                    buttonplus20Pressedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(buttonplus20pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                case true:
+                    buttonplus20Releasedtick = 1;
+                    break;
+                case false:
+                    buttonplus20Releasedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus20Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000 && completetick == 0)
+            {
+                case true:
+                    souls.soulsclick += 10;
+                    souls.souls -= 1000;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus20Releasedtick == 1 && souls.soulsadd == true)
+            {
+                case true:
+                    souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #region +30 BUTTON UPDATES
+            switch (deepone.MouseDest.Intersects(buttonplus30pos) && (newState.LeftButton == ButtonState.Pressed))
+            {
+                case true:
+                    buttonplus30Pressedtick = 1;
+                    break;
+                case false:
+                    buttonplus30Pressedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (deepone.MouseDest.Intersects(buttonplus30pos) && (newState.LeftButton == ButtonState.Released))
+            {
+                case true:
+                    buttonplus30Releasedtick = 1;
+                    break;
+                case false:
+                    buttonplus30Releasedtick = 0;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus30Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1500 && completetick == 0)
+            {
+                case true:
+                    souls.soulsclick += 10;
+                    souls.souls -= 1500;
+                    souls.soulsadd = true;
+                    deepone.soundEffects[0].CreateInstance().Play();
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus30Releasedtick == 1 && souls.soulsadd == true)
+            {
+                case true:
+                    souls.soulsadd = false;
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
+            #endregion
         }
 
         public void Draw(GameTime gameTime, Upgrades upgrades)
@@ -1131,7 +1498,6 @@ namespace The_Deep_One
 
             #region BUTTON DRAWING
             spriteBatch.Draw(button1, new Rectangle(button1pos.X, button1pos.Y, button1pos.Width, button1pos.Height), Color.White);
-            spriteBatch.Draw(button2, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
             spriteBatch.Draw(button3, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
             spriteBatch.Draw(button4, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
             spriteBatch.Draw(button5, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
@@ -1139,7 +1505,6 @@ namespace The_Deep_One
             spriteBatch.Draw(button7, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
             spriteBatch.Draw(button8, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
             spriteBatch.Draw(button9, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
-
 
             switch (button1Pressedtick)
             {
@@ -1159,10 +1524,34 @@ namespace The_Deep_One
                     break;
             }
 
+            switch (souls.souls <= 49)
+            {
+                case true:
+                    spriteBatch.Draw(button2Pressed, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button2, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
             switch (button3Pressedtick)
             {
                 case 1:
                     spriteBatch.Draw(button3Pressed, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (souls.souls <= 249)
+            {
+                case true:
+                    spriteBatch.Draw(button3Pressed, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button3, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
                     break;
                 default:
                     break;
@@ -1177,10 +1566,34 @@ namespace The_Deep_One
                     break;
             }
 
+            switch (souls.souls <= 999)
+            {
+                case true:
+                    spriteBatch.Draw(button4Pressed, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button4, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
             switch (button5Pressedtick)
             {
                 case 1:
                     spriteBatch.Draw(button5Pressed, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (souls.souls <= 9999)
+            {
+                case true:
+                    spriteBatch.Draw(button5Pressed, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button5, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
                     break;
                 default:
                     break;
@@ -1195,10 +1608,34 @@ namespace The_Deep_One
                     break;
             }
 
+            switch (souls.souls <= 99999)
+            {
+                case true:
+                    spriteBatch.Draw(button6Pressed, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button6, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
             switch (button7Pressedtick)
             {
                 case 1:
                     spriteBatch.Draw(button7Pressed, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (souls.souls <= 999999)
+            {
+                case true:
+                    spriteBatch.Draw(button7Pressed, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button7, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
                     break;
                 default:
                     break;
@@ -1213,10 +1650,34 @@ namespace The_Deep_One
                     break;
             }
 
+            switch (souls.souls <= 9999999)
+            {
+                case true:
+                    spriteBatch.Draw(button8Pressed, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button8, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
             switch (button9Pressedtick)
             {
                 case 1:
                     spriteBatch.Draw(button9Pressed, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (souls.souls <= 99999999)
+            {
+                case true:
+                    spriteBatch.Draw(button9Pressed, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
+                    break;
+                case false:
+                    spriteBatch.Draw(button9, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
                     break;
                 default:
                     break;
@@ -1257,6 +1718,70 @@ namespace The_Deep_One
             }
             #endregion
 
+            #region +1 +2 +5 +10 +20 +30 BUTTON DRAWING
+            spriteBatch.Draw(buttonplus1, new Rectangle(buttonplus1pos.X, buttonplus1pos.Y, buttonplus1pos.Width, buttonplus1pos.Height), Color.White);
+            spriteBatch.Draw(buttonplus1, new Rectangle(buttonplus2pos.X, buttonplus2pos.Y, buttonplus2pos.Width, buttonplus2pos.Height), Color.White);
+            spriteBatch.Draw(buttonplus5, new Rectangle(buttonplus5pos.X, buttonplus5pos.Y, buttonplus1pos.Width, buttonplus5pos.Height), Color.White);
+            spriteBatch.Draw(buttonplus10, new Rectangle(buttonplus10pos.X, buttonplus10pos.Y, buttonplus10pos.Width, buttonplus10pos.Height), Color.White);
+            spriteBatch.Draw(buttonplus20, new Rectangle(buttonplus20pos.X, buttonplus20pos.Y, buttonplus20pos.Width, buttonplus20pos.Height), Color.White);
+            spriteBatch.Draw(buttonplus30, new Rectangle(buttonplus30pos.X, buttonplus30pos.Y, buttonplus30pos.Width, buttonplus30pos.Height), Color.White);
+
+
+            switch (buttonplus1Pressedtick)
+            {
+                case 1:
+                    spriteBatch.Draw(buttonplus1Pressed, new Rectangle(buttonplus1pos.X, buttonplus1pos.Y, buttonplus1pos.Width, buttonplus1pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus2Pressedtick)
+            {
+                case 1:
+                    spriteBatch.Draw(buttonplus2Pressed, new Rectangle(buttonplus2pos.X, buttonplus2pos.Y, buttonplus2pos.Width, buttonplus2pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus5Pressedtick)
+            {
+                case 1:
+                    spriteBatch.Draw(buttonplus5Pressed, new Rectangle(buttonplus5pos.X, buttonplus5pos.Y, buttonplus5pos.Width, buttonplus5pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus10Pressedtick)
+            {
+                case 1:
+                    spriteBatch.Draw(buttonplus10Pressed, new Rectangle(buttonplus10pos.X, buttonplus10pos.Y, buttonplus10pos.Width, buttonplus10pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus20Pressedtick)
+            {
+                case 1:
+                    spriteBatch.Draw(buttonplus20Pressed, new Rectangle(buttonplus20pos.X, buttonplus20pos.Y, buttonplus20pos.Width, buttonplus20pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (buttonplus30Pressedtick)
+            {
+                case 1:
+                    spriteBatch.Draw(buttonplus30Pressed, new Rectangle(buttonplus30pos.X, buttonplus30pos.Y, buttonplus30pos.Width, buttonplus30pos.Height), Color.White);
+                    break;
+                default:
+                    break;
+            }
+            #endregion
+
             #region BUTTON QUANTITY TEXT
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade1, new Vector2(button2pos.X - 120, button2pos.Y + 13), Color.White);
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade2, new Vector2(button3pos.X - 120, button3pos.Y + 13), Color.White);
@@ -1286,6 +1811,21 @@ namespace The_Deep_One
             spriteBatch.DrawString(font, "5X", new Vector2(button5xpos.X + 12, button5xpos.Y + 12), Color.White);
             spriteBatch.DrawString(font, "10X", new Vector2(button10xpos.X + 10, button10xpos.Y + 12), Color.White);
             spriteBatch.DrawString(font, "50X", new Vector2(button50xpos.X + 10, button50xpos.Y + 12), Color.White);
+            #endregion
+
+            #region +1 +2 +5 +10 +20 +30 BUTTON TEXT
+            spriteBatch.DrawString(font, "+1 Clicker", new Vector2(buttonplus1pos.X + 8, buttonplus1pos.Y + 5), Color.White);
+            spriteBatch.DrawString(font, "$50", new Vector2(buttonplus1pos.X + 32, buttonplus1pos.Y + 22), Color.White);
+            spriteBatch.DrawString(font, "+2 Clicker", new Vector2(buttonplus2pos.X + 8, buttonplus2pos.Y + 5), Color.White);
+            spriteBatch.DrawString(font, "$100", new Vector2(buttonplus2pos.X + 28, buttonplus2pos.Y + 22), Color.White);
+            spriteBatch.DrawString(font, "+5 Clicker", new Vector2(buttonplus5pos.X + 8, buttonplus5pos.Y + 5), Color.White);
+            spriteBatch.DrawString(font, "$250", new Vector2(buttonplus5pos.X + 28, buttonplus5pos.Y + 22), Color.White);
+            spriteBatch.DrawString(font, "+10 Clicker", new Vector2(buttonplus10pos.X + 4, buttonplus10pos.Y + 5), Color.White);
+            spriteBatch.DrawString(font, "$500", new Vector2(buttonplus10pos.X + 28, buttonplus10pos.Y + 22), Color.White);
+            spriteBatch.DrawString(font, "+20 Clicker", new Vector2(buttonplus20pos.X + 4, buttonplus20pos.Y + 5), Color.White);
+            spriteBatch.DrawString(font, "$1000", new Vector2(buttonplus20pos.X + 24, buttonplus20pos.Y + 22), Color.White);
+            spriteBatch.DrawString(font, "+30 Clicker", new Vector2(buttonplus30pos.X + 4, buttonplus30pos.Y + 5), Color.White);
+            spriteBatch.DrawString(font, "$1500", new Vector2(buttonplus30pos.X + 24, buttonplus30pos.Y + 22), Color.White);
             #endregion
         }
     }
