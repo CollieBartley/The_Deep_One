@@ -30,8 +30,12 @@
     <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/background.mp3</File>
     <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/news.wav</File>
     <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/click.wav</File>
+    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/roar.wav</File>
+    <File>C:/Users/c_bar/Documents/GitHub/The_Deep_One/Incremental_Game/Content/9.jpg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

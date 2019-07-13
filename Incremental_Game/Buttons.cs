@@ -18,7 +18,6 @@ namespace The_Deep_One
 
         Souls souls;
         DeepOne deepone;
-        Upgrades upgrades;
 
         private SpriteFont font;
         private SpriteFont fontlarge;
@@ -117,14 +116,13 @@ namespace The_Deep_One
         {
             Content.RootDirectory = "Content";
         }
-        public Buttons(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls, Upgrades p_upgrades)
+        public Buttons(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls)
         {
             deepone = p_deepone;
             graphics = p_graphics;
             spriteBatch = p_spriteBatch;
             Content = content;
             souls = p_souls;
-            upgrades = p_upgrades;
         }
 
         public void LoadButtonContent()
@@ -242,7 +240,7 @@ namespace The_Deep_One
             fontlarge = Content.Load<SpriteFont>("fontlarge");
         }
 
-        public void Update(GameTime gameTime, News news)
+        public void Update(GameTime gameTime, News news, Upgrades upgrades)
         {
             MouseState newState = Mouse.GetState();
 
@@ -271,7 +269,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button1Pressedtick == 1 && souls.soulsadd == false)
+            switch (button1Pressedtick == 1 && souls.soulsadd == false && deepone.endstate == 0)
             {
                 case true:
                     souls.souls++;
@@ -317,7 +315,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50 && buttonxtick == 0)
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade1++;
@@ -400,7 +398,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250 && buttonxtick == 0)
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade2++;
@@ -483,7 +481,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500 && buttonxtick == 0)
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade3++;
@@ -566,7 +564,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000 && buttonxtick == 0)
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade4++;
@@ -649,7 +647,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000 && buttonxtick == 0)
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade5++;
@@ -732,7 +730,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000 && buttonxtick == 0)
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade6++;
@@ -815,7 +813,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000 && buttonxtick == 0)
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade7++;
@@ -898,7 +896,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000 && buttonxtick == 0)
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade8++;
@@ -1126,7 +1124,7 @@ namespace The_Deep_One
             #endregion
         }
 
-        public void Draw(GameTime gameTime)
+        public void Draw(GameTime gameTime, Upgrades upgrades)
         {
             graphics.GraphicsDevice.Clear(Color.Black);
             MouseState newState = Mouse.GetState();
@@ -1224,7 +1222,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (completetick == 1)
+            switch (completetick == 1 && deepone.endstate == 0)
             {
                 case true:
                     spriteBatch.Draw(button10, new Rectangle(button10pos.X, button10pos.Y, button10pos.Width, button10pos.Height), Color.White);
@@ -1258,8 +1256,6 @@ namespace The_Deep_One
                     break;
             }
             #endregion
-
-            upgrades.Draw(gameTime);
 
             #region BUTTON QUANTITY TEXT
             spriteBatch.DrawString(fontlarge, "QTY: " + upgrades.upgrade1, new Vector2(button2pos.X - 120, button2pos.Y + 13), Color.White);

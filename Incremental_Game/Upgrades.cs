@@ -18,7 +18,6 @@ namespace The_Deep_One
 
         Souls souls;
         DeepOne deepone;
-        Buttons buttons;
         News news;
         Images images;
 
@@ -39,24 +38,23 @@ namespace The_Deep_One
         {
             Content.RootDirectory = "Content";
         }
-        public Upgrades(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls, Buttons p_buttons, News p_news, Images p_images)
+        public Upgrades(DeepOne p_deepone, GraphicsDeviceManager p_graphics, SpriteBatch p_spriteBatch, ContentManager content, Souls p_souls, News p_news, Images p_images)
         {
             Content = content;
             deepone = p_deepone;
             graphics = p_graphics;
             spriteBatch = p_spriteBatch;
             souls = p_souls;
-            buttons = p_buttons;
             news = p_news;
             images = p_images;
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, Buttons buttons)
         {
             MouseState newState = Mouse.GetState();
 
             #region UPGRADES
-            switch (upgrade1 > 0)
+            switch (upgrade1 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade1 * 2);
@@ -65,7 +63,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade2 > 0)
+            switch (upgrade2 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade2 * 10);
@@ -74,7 +72,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade3 > 0)
+            switch (upgrade3 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade3 * 50);
@@ -83,7 +81,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade4 > 0)
+            switch (upgrade4 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade4 * 100);
@@ -92,7 +90,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade5 > 0)
+            switch (upgrade5 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade5 * 1000);
@@ -101,7 +99,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade6 > 0)
+            switch (upgrade6 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade6 * 10000);
@@ -110,7 +108,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade7 > 0)
+            switch (upgrade7 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade7 * 100000);
@@ -119,7 +117,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (upgrade8 > 0)
+            switch (upgrade8 > 0 && buttons.completetick == 0)
             {
                 case true:
                     souls.souls += (upgrade8 * 1000000);

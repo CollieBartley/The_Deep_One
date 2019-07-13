@@ -71,8 +71,8 @@ namespace The_Deep_One
             Screen.X = 0;
             Screen.Y = 0;
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            upgrades = new Upgrades(this, graphics, spriteBatch, Content, souls, buttons, news, images);
-            buttons = new Buttons(this, graphics, spriteBatch, Content, souls, upgrades);
+            upgrades = new Upgrades(this, graphics, spriteBatch, Content, souls, news, images);
+            buttons = new Buttons(this, graphics, spriteBatch, Content, souls);
             news = new News(this, graphics, spriteBatch, Content, souls, buttons);
             images = new Images(this, graphics, spriteBatch, Content, souls, buttons, news);
 
@@ -130,7 +130,7 @@ namespace The_Deep_One
             {
                 case true:
                     timeSinceLastUpdate = 0;
-                    upgrades.Update(gameTime);
+                    upgrades.Update(gameTime, buttons);
                     break;
                 default:
                     break;
@@ -155,7 +155,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls >= 10000000000)
+            switch (souls.souls >= 10000000000 && buttons.completetick == 0)
             {
                 case true:
                     buttons.completetick = 1;
@@ -190,7 +190,7 @@ namespace The_Deep_One
                     break;
             }
 
-            buttons.Update(gameTime, news);
+            buttons.Update(gameTime, news, upgrades);
 
             news.Update(gameTime);
 
@@ -211,7 +211,9 @@ namespace The_Deep_One
 
             images.Draw(gameTime);
 
-            buttons.Draw(gameTime);
+            buttons.Draw(gameTime, upgrades);
+
+            upgrades.Draw(gameTime);
 
             spriteBatch.DrawString(fontlarge, "10 Billion is required to please The Deep One", new Vector2(15, 860), Color.White);
 
