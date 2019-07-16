@@ -1540,7 +1540,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 49)
+            switch (souls.souls <= upgrades.incPriceUp1)
             {
                 case true:
                     spriteBatch.Draw(button2Pressed, new Rectangle(button2pos.X, button2pos.Y, button2pos.Width, button2pos.Height), Color.White);
@@ -1561,7 +1561,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 249)
+            switch (souls.souls <= upgrades.incPriceUp2)
             {
                 case true:
                     spriteBatch.Draw(button3Pressed, new Rectangle(button3pos.X, button3pos.Y, button3pos.Width, button3pos.Height), Color.White);
@@ -1582,7 +1582,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 999)
+            switch (souls.souls <= upgrades.incPriceUp3)
             {
                 case true:
                     spriteBatch.Draw(button4Pressed, new Rectangle(button4pos.X, button4pos.Y, button4pos.Width, button4pos.Height), Color.White);
@@ -1603,7 +1603,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 9999)
+            switch (souls.souls <= upgrades.incPriceUp4)
             {
                 case true:
                     spriteBatch.Draw(button5Pressed, new Rectangle(button5pos.X, button5pos.Y, button5pos.Width, button5pos.Height), Color.White);
@@ -1624,7 +1624,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 99999)
+            switch (souls.souls <= upgrades.incPriceUp5)
             {
                 case true:
                     spriteBatch.Draw(button6Pressed, new Rectangle(button6pos.X, button6pos.Y, button6pos.Width, button6pos.Height), Color.White);
@@ -1645,7 +1645,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 999999)
+            switch (souls.souls <= upgrades.incPriceUp6)
             {
                 case true:
                     spriteBatch.Draw(button7Pressed, new Rectangle(button7pos.X, button7pos.Y, button7pos.Width, button7pos.Height), Color.White);
@@ -1666,7 +1666,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 9999999)
+            switch (souls.souls <= upgrades.incPriceUp7)
             {
                 case true:
                     spriteBatch.Draw(button8Pressed, new Rectangle(button8pos.X, button8pos.Y, button8pos.Width, button8pos.Height), Color.White);
@@ -1687,7 +1687,7 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (souls.souls <= 99999999)
+            switch (souls.souls <= upgrades.incPriceUp8)
             {
                 case true:
                     spriteBatch.Draw(button9Pressed, new Rectangle(button9pos.X, button9pos.Y, button9pos.Width, button9pos.Height), Color.White);
