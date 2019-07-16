@@ -397,11 +397,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 50 && buttonxtick == 0 && completetick == 0)
+            switch (button2Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp1 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade1++;
-                    souls.souls -= 50;
+                    souls.souls -= (int)upgrades.incPriceUp1;
+                    upgrades.incPriceUp1 = (float)upgrades.incPriceUp1 * 1.05;
+                    upgrades.incPriceUp1 = Math.Round(upgrades.incPriceUp1);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -480,11 +482,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 250 && buttonxtick == 0 && completetick == 0)
+            switch (button3Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp2 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade2++;
-                    souls.souls -= 250;
+                    souls.souls -= (int)upgrades.incPriceUp2;
+                    upgrades.incPriceUp2 = (float)upgrades.incPriceUp2 * 1.05;
+                    upgrades.incPriceUp2 = Math.Round(upgrades.incPriceUp2);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -563,11 +567,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 500 && buttonxtick == 0 && completetick == 0)
+            switch (button4Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp3 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade3++;
-                    souls.souls -= 1000;
+                    souls.souls -= (int)upgrades.incPriceUp3;
+                    upgrades.incPriceUp3 = (float)upgrades.incPriceUp3 * 1.05;
+                    upgrades.incPriceUp3 = Math.Round(upgrades.incPriceUp3);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -646,11 +652,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000 && buttonxtick == 0 && completetick == 0)
+            switch (button5Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp4 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade4++;
-                    souls.souls -= 10000;
+                    souls.souls -= (int)upgrades.incPriceUp4;
+                    upgrades.incPriceUp4 = (float)upgrades.incPriceUp4 * 1.05;
+                    upgrades.incPriceUp4 = Math.Round(upgrades.incPriceUp4);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -729,11 +737,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000 && buttonxtick == 0 && completetick == 0)
+            switch (button6Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp5 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade5++;
-                    souls.souls -= 100000;
+                    souls.souls -= (int)upgrades.incPriceUp5;
+                    upgrades.incPriceUp5 = (float)upgrades.incPriceUp5 * 1.05;
+                    upgrades.incPriceUp5 = Math.Round(upgrades.incPriceUp5);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -812,11 +822,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 1000000 && buttonxtick == 0 && completetick == 0)
+            switch (button7Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp6 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade6++;
-                    souls.souls -= 1000000;
+                    souls.souls -= (int)upgrades.incPriceUp6;
+                    upgrades.incPriceUp6 = (float)upgrades.incPriceUp6 * 1.05;
+                    upgrades.incPriceUp6 = Math.Round(upgrades.incPriceUp6);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -895,11 +907,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 10000000 && buttonxtick == 0 && completetick == 0)
+            switch (button8Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp7 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade7++;
-                    souls.souls -= 10000000;
+                    souls.souls -= (int)upgrades.incPriceUp7;
+                    upgrades.incPriceUp7 = (float)upgrades.incPriceUp7 * 1.05;
+                    upgrades.incPriceUp7 = Math.Round(upgrades.incPriceUp7);
                     souls.soulsadd = true;
                     deepone.soundEffects[0].CreateInstance().Play();
                     break;
@@ -978,11 +992,13 @@ namespace The_Deep_One
                     break;
             }
 
-            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= 100000000 && buttonxtick == 0 && completetick == 0)
+            switch (button9Pressedtick == 1 && souls.soulsadd == false && souls.souls >= upgrades.incPriceUp8 && buttonxtick == 0 && completetick == 0)
             {
                 case true:
                     upgrades.upgrade8++;
-                    souls.souls -= 100000000;
+                    souls.souls -= (int)upgrades.incPriceUp8;
+                    upgrades.incPriceUp8 = (float)upgrades.incPriceUp8 * 1.05;
+                    upgrades.incPriceUp8 = Math.Round(upgrades.incPriceUp8);
                     deepone.soundEffects[0].CreateInstance().Play();
                     souls.soulsadd = true;
                     break;
@@ -1796,14 +1812,14 @@ namespace The_Deep_One
             #region BUTTON TEXT
             spriteBatch.DrawString(font, "Slaughter in the name of", new Vector2(button1pos.X + 35, button1pos.Y + 9), Color.White);
             spriteBatch.DrawString(font, "The Deep One", new Vector2(button1pos.X + 75, button1pos.Y + 28), Color.White);
-            spriteBatch.DrawString(font, "50 - Servitors of Cthulhu", new Vector2(button2pos.X + 10, button2pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "250 - Shoggoth", new Vector2(button3pos.X + 10, button3pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "1K - Dark Young", new Vector2(button4pos.X + 10, button4pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "10K - Star-Spawn of Cthulhu", new Vector2(button5pos.X + 10, button5pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "100K - Dimensional Shambler", new Vector2(button6pos.X + 10, button6pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "1M - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "10M - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
-            spriteBatch.DrawString(font, "100M - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp1 + " - Servitors of Cthulhu", new Vector2(button2pos.X + 10, button2pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp2 + " - Shoggoth", new Vector2(button3pos.X + 10, button3pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp3 + " - Dark Young", new Vector2(button4pos.X + 10, button4pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp4 + " - Star-Spawn of Cthulhu", new Vector2(button5pos.X + 10, button5pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp5 + " - Dimensional Shambler", new Vector2(button6pos.X + 10, button6pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp6 + " - Moon-Beast", new Vector2(button7pos.X + 10, button7pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp7 + " - Chthonian", new Vector2(button8pos.X + 10, button8pos.Y + 18), Color.White);
+            spriteBatch.DrawString(font, upgrades.incPriceUp8 + " - Cthulhu", new Vector2(button9pos.X + 10, button9pos.Y + 18), Color.White);
             #endregion
 
             #region 1X 5X 10X 50X BUTTON TEXT

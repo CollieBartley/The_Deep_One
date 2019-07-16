@@ -21,14 +21,20 @@ namespace The_Deep_One
         News news;
         Images images;
 
-        public int upgrade1 = 0;
-        public int upgrade2 = 0;
-        public int upgrade3 = 0;
-        public int upgrade4 = 0;
-        public int upgrade5 = 0;
-        public int upgrade6 = 0;
-        public int upgrade7 = 0;
-        public int upgrade8 = 0;
+        public int upgrade1, upgrade2, upgrade3, upgrade4, upgrade5, upgrade6, upgrade7, upgrade8 = 0;
+
+        #region Global Prices
+        // Easier way to modify upgrade prices globally, enjoy!
+        // TODO: Abbreviate non-static text without making a complete mess
+        public double incPriceUp1 = 50; // Servitors of Cthulhu
+        public double incPriceUp2 = 150; // Shoggoth
+        public double incPriceUp3 = 1000; // 1 Thousand - Dark Young
+        public double incPriceUp4 = 10000; // 10 Thousand - Star-Spawn of Cthulhu
+        public double incPriceUp5 = 100000; // 100 Thousand - Dimensional Shambler
+        public double incPriceUp6 = 1000000; // 1 Million - Moon-Beast
+        public double incPriceUp7 = 10000000; // 10 Million - Chthonian
+        public double incPriceUp8 = 100000000; // 100 Million - Cthulhu
+        #endregion
 
         private SpriteFont font;
         private SpriteFont fontlarge;
