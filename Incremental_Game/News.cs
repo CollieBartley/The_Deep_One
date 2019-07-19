@@ -3,10 +3,6 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using System.Collections.Generic;
-using System;
-using System.Linq;
 
 namespace The_Deep_One
 {
@@ -162,24 +158,24 @@ namespace The_Deep_One
                     spriteBatch.Draw(news1, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
                     switch (deepone.neWsInst.State == SoundState.Stopped && newssound1 == 0)
                     {
-                    case true:
+                        case true:
                             deepone.neWsInst.Play();
                             newssound1 = 1;
-                        break;
-                    default:
-                        break;
+                            break;
+                        default:
+                            break;
                     }
                     break;
                 case 2:
                     spriteBatch.Draw(news2, new Rectangle(newspos.X, newspos.Y, newspos.Width, newspos.Height), Color.White);
                     switch (deepone.neWsInst.State == SoundState.Stopped && newssound2 == 0)
                     {
-                    case true:
-                        deepone.neWsInst.Play();
-                        newssound2 = 1;
-                        break;
-                    default:
-                        break;
+                        case true:
+                            deepone.neWsInst.Play();
+                            newssound2 = 1;
+                            break;
+                        default:
+                            break;
                     }
                     break;
                 case 3:

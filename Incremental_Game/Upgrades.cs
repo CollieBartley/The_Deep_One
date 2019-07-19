@@ -1,12 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
-using System.Collections.Generic;
-using System;
-using System.Linq;
 
 namespace The_Deep_One
 {
@@ -26,18 +21,25 @@ namespace The_Deep_One
         #region Global Prices
         // Easier way to modify upgrade prices globally, enjoy!
         // TODO: Abbreviate non-static text without making a complete mess
-        public double incPriceUp1 = 50; // Servitors of Cthulhu
-        public double incPriceUp2 = 150; // Shoggoth
-        public double incPriceUp3 = 1000; // 1 Thousand - Dark Young
-        public double incPriceUp4 = 10000; // 10 Thousand - Star-Spawn of Cthulhu
-        public double incPriceUp5 = 100000; // 100 Thousand - Dimensional Shambler
-        public double incPriceUp6 = 1000000; // 1 Million - Moon-Beast
-        public double incPriceUp7 = 10000000; // 10 Million - Chthonian
-        public double incPriceUp8 = 100000000; // 100 Million - Cthulhu
+        public double PriceUp1 = 50; // Servitors of Cthulhu
+        public double PriceUp2 = 150; // Shoggoth
+        public double PriceUp3 = 1000; // 1 Thousand - Dark Young
+        public double PriceUp4 = 10000; // 10 Thousand - Star-Spawn of Cthulhu
+        public double PriceUp5 = 100000; // 100 Thousand - Dimensional Shambler
+        public double PriceUp6 = 1000000; // 1 Million - Moon-Beast
+        public double PriceUp7 = 10000000; // 10 Million - Chthonian
+        public double PriceUp8 = 100000000; // 100 Million - Cthulhu
         #endregion
 
-        private SpriteFont font;
-        private SpriteFont fontlarge;
+        public double UpgradePercent1 = 1.50;
+        public double UpgradePercent2 = 1.75;
+        public double UpgradePercent3 = 2.05;
+        public double UpgradePercent4 = 2.50;
+        public double UpgradePercent5 = 3.75;
+        public double UpgradePercent6 = 4.05;
+        public double UpgradePercent7 = 4.50;
+        public double UpgradePercent8 = 4.75;
+
         public Rectangle Screen;
 
         public Upgrades()
